@@ -1,120 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Pardesi Consultancy</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            burgundy: "#4a0e0a",
-            deepburgundy: "#120606",
-            cream: "#fff7e8",
-            gold: "#f4e3c3",
-            charcoal: "#1b1b1b",
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-    }
-  </style>
+  <style> body { font-family:'Poppins', sans-serif; } </style>
 </head>
 
-<body class="bg-deepburgundy text-cream">
+<body class="bg-[#fff7e8] text-[#2b0504]">
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-30 bg-deepburgundy/95 border-b border-gold/20 backdrop-blur">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+  <header class="bg-[#4a0e0a] text-[#f4e3c3] py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+  
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-gold text-xs font-semibold shadow-md">
-          PC
-        </div>
-        <div>
-          <div class="text-sm font-semibold text-cream">Pardesi Consultancy</div>
-          <div class="text-[10px] tracking-[0.18em] uppercase text-gold/80">
-            Where Growth Meets Success
-          </div>
-        </div>
+        <div class="w-10 h-10 rounded-full bg-[#2b0504] text-[#f4e3c3] flex items-center justify-center font-semibold">PC</div>
+        <h2 class="text-lg font-semibold">Pardesi Consultancy</h2>
       </div>
 
-      <nav class="hidden md:flex items-center gap-6 text-xs text-gold/80 tracking-[0.16em] uppercase">
-        <a href="index.html" class="hover:text-cream transition">Home</a>
-        <a href="about.html" class="hover:text-cream transition">About</a>
-        <a href="services.html" class="text-gold">Services</a>
-        <a href="contact.html" class="hover:text-cream transition">Contact</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="font-semibold underline">Services</a>
+        <a href="contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-  <main class="pt-20 pb-16">
-    <!-- SERVICES CONTENT -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 mt-10">
-      <h1 class="text-2xl sm:text-3xl font-semibold text-gold mb-4">
-        Services
-      </h1>
-      <p class="text-sm sm:text-base text-cream/85 max-w-2xl">
-        We focus on giving you clarity around your Canada options — not selling you a dream. 
-        Our services are designed to help you understand pathways and make informed decisions.
-      </p>
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-4 py-20">
 
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <!-- Service 1 -->
-        <div class="bg-[#1b0706] rounded-2xl border border-gold/25 p-5 shadow-lg text-sm">
-          <h2 class="text-sm font-semibold text-gold">Study in Canada</h2>
-          <p class="mt-2 text-cream/80 text-xs">
-            High-level guidance for choosing programs, understanding basic requirements, and preparing 
-            to speak with colleges or official advisors.
-          </p>
-        </div>
+    <h1 class="text-3xl md:text-4xl font-semibold">Our Services</h1>
+    <p class="mt-4 text-[#5b403a] text-sm">
+      Support for all major Canada pathways.
+    </p>
 
-        <!-- Service 2 -->
-        <div class="bg-[#1b0706] rounded-2xl border border-gold/25 p-5 shadow-lg text-sm">
-          <h2 class="text-sm font-semibold text-gold">PR & Long-Term Options</h2>
-          <p class="mt-2 text-cream/80 text-xs">
-            Overview of Express Entry, PNP-style options, and how your profile may fit into Canada’s long-term pathways.
-          </p>
-        </div>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
 
-        <!-- Service 3 -->
-        <div class="bg-[#1b0706] rounded-2xl border border-gold/25 p-5 shadow-lg text-sm">
-          <h2 class="text-sm font-semibold text-gold">Profile Clarity Call</h2>
-          <p class="mt-2 text-cream/80 text-xs">
-            A structured conversation to go through your education, experience, language scores and future plans.
-          </p>
-        </div>
+      <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
+        <h3 class="text-lg font-semibold">Express Entry & PR</h3>
+        <p class="mt-2 text-sm text-[#5b403a]">
+          CRS evaluation, documents, profile building.
+        </p>
       </div>
 
-      <p class="mt-8 text-xs text-gold/80 max-w-3xl">
-        Note: We provide guidance and clarity based on public information and personal understanding. 
-        We are not a law firm and do not replace the role of licensed immigration professionals or official IRCC resources.
-      </p>
-    </section>
+      <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
+        <h3 class="text-lg font-semibold">Study Visa</h3>
+        <p class="mt-2 text-sm text-[#5b403a]">
+          SOP guidance, college selection, file preparation.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
+        <h3 class="text-lg font-semibold">Work Permit</h3>
+        <p class="mt-2 text-sm text-[#5b403a]">
+          LMIA overview, employer requirements.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
+        <h3 class="text-lg font-semibold">PNP Programs</h3>
+        <p class="mt-2 text-sm text-[#5b403a]">
+          Province selection and scoring strategy.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
+        <h3 class="text-lg font-semibold">Family Sponsorship</h3>
+        <p class="mt-2 text-sm text-[#5b403a]">
+          Spousal, child and parent sponsorship.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
+        <h3 class="text-lg font-semibold">IELTS & Profile Planning</h3>
+        <p class="mt-2 text-sm text-[#5b403a]">
+          Scoring targets and improvement roadmap.
+        </p>
+      </div>
+
+    </div>
+
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-black text-gold/70 text-xs py-4 mt-8">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-2">
-      <div>© 2025 Pardesi Consultancy. All rights reserved.</div>
-      <div class="text-[10px]">
-        For high-level guidance only. Always verify with official IRCC instructions.
-      </div>
-    </div>
+  <footer class="bg-[#4a0e0a] text-[#f4e3c3]/80 py-4 text-xs text-center">
+    © 2025 Pardesi Consultancy
   </footer>
 
 </body>
