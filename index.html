@@ -6,13 +6,12 @@
     <title>Pardesi Consultancy – Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      body {
-        font-family: "Poppins", system-ui, sans-serif;
-      }
+      body { font-family: "Poppins", system-ui, sans-serif; }
     </style>
   </head>
 
   <body class="bg-[#2b0504] text-[#f4e3c3]">
+
     <!-- NAVBAR -->
     <header class="fixed top-0 left-0 right-0 bg-[#2b0504] text-[#f4e3c3] shadow-lg z-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
@@ -28,17 +27,17 @@
 
         <!-- Desktop Menu -->
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="index.html" class="hover:text-white">Home</a>
+          <a href="index.html" class="font-semibold text-white">Home</a>
           <a href="about.html" class="hover:text-white">About</a>
           <a href="services.html" class="hover:text-white">Services</a>
           <a href="contact.html" class="hover:text-white">Contact</a>
         </nav>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile menu button -->
         <button class="md:hidden text-2xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden');">☰</button>
       </div>
 
-      <!-- Mobile dropdown -->
+      <!-- Mobile Menu -->
       <div id="mobileMenu" class="md:hidden hidden bg-[#2b0504] text-[#f4e3c3] border-t border-[#f4e3c3]/20">
         <a href="index.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">Home</a>
         <a href="about.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">About</a>
@@ -49,29 +48,41 @@
 
     <div class="pt-24"></div>
 
-    <!-- HERO SECTION WITH CHESS IMAGE -->
-    <section class="relative h-[90vh] w-full">
+    <!-- SIMPLE CLEAN HERO -->
+    <section class="relative h-[90vh] w-full flex items-center justify-center text-center px-6">
+
+      <!-- Background chess image -->
       <img
         src="https://images.unsplash.com/photo-1528819622765-d6bcf132f793?auto=format&fit=crop&w=1600&q=80"
         class="absolute inset-0 w-full h-full object-cover opacity-40"
       />
 
-      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-        <h1 class="text-4xl md:text-5xl font-bold text-[#f4e3c3] drop-shadow">
-          Expert advice for your Canada journey.
+      <!-- Centered content -->
+      <div class="relative z-10 flex flex-col items-center">
+        
+        <!-- Large PC Logo -->
+        <div class="w-24 h-24 rounded-full bg-[#f4e3c3] text-[#2b0504] flex items-center justify-center text-4xl font-bold shadow-lg">
+          PC
+        </div>
+
+        <h1 class="mt-6 text-4xl md:text-5xl font-semibold text-[#f4e3c3] drop-shadow">
+          Pardesi Consultancy
         </h1>
-        <p class="mt-4 max-w-xl text-sm text-[#f4e3c3]/90">
-          Helping students, families, and professionals achieve their Canadian dreams through honest, experience-based guidance.
+
+        <p class="mt-3 text-sm tracking-[0.25em] uppercase text-[#f4e3c3]/80">
+          Where Growth Meets Success
         </p>
       </div>
+
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[#000000] text-[#f4e3c3]/70 py-5 text-xs mt-10">
+    <footer class="bg-black text-[#f4e3c3]/70 py-5 text-xs mt-10">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between">
         <div>© 2025 Pardesi Consultancy</div>
-        <div>Trusted Canada Immigration & Education Guidance</div>
+        <div>Trusted Canada Education & Immigration Guidance</div>
       </div>
     </footer>
+
   </body>
 </html>
