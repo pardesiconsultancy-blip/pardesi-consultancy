@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pardesi Consultancy – Services</title>
 
-    <!-- FIXED TAILWIND CDN (Correct Working Version) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -16,138 +16,147 @@
   </head>
 
   <body class="bg-[#fff7e8] text-[#2b0504]">
-    <!-- NAVBAR -->
-    <header
-      class="fixed top-0 left-0 right-0 bg-[#2b0504] text-[#f4e3c3] shadow-lg z-30"
-    >
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between"
-      >
+
+    <!-- NAVBAR (mobile-safe) -->
+    <header class="fixed top-0 left-0 right-0 bg-[#2b0504] text-[#f4e3c3] shadow-lg z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+
+        <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3">
-          <div
-            class="w-10 h-10 rounded-full bg-[#f4e3c3] text-[#2b0504] font-bold flex items-center justify-center"
-          >
+          <div class="w-10 h-10 rounded-full bg-[#f4e3c3] text-[#2b0504] font-bold flex items-center justify-center">
             PC
           </div>
           <div>
-            <div
-              class="text-xs tracking-[0.18em] uppercase text-[#f4e3c3]/70"
-            >
+            <div class="text-xs tracking-[0.18em] uppercase text-[#f4e3c3]/70">
               Where Growth Meets Success
             </div>
-            <div class="text-base font-semibold">Pardesi Consultancy</div>
+            <div class="text-base font-semibold">
+              Pardesi Consultancy
+            </div>
           </div>
         </a>
 
+        <!-- Desktop Menu -->
         <nav class="hidden md:flex items-center gap-6 text-sm">
           <a href="index.html" class="hover:text-white">Home</a>
           <a href="about.html" class="hover:text-white">About</a>
           <a href="services.html" class="font-semibold text-white">Services</a>
           <a href="contact.html" class="hover:text-white">Contact</a>
         </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="md:hidden text-2xl"
+          onclick="document.getElementById('mobileMenu').classList.toggle('hidden');"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden bg-[#2b0504] text-[#f4e3c3] border-t border-[#f4e3c3]/20"
+      >
+        <a href="index.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">Home</a>
+        <a href="about.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">About</a>
+        <a href="services.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">Services</a>
+        <a href="contact.html" class="block px-4 py-3">Contact</a>
       </div>
     </header>
 
-    <main class="pt-24 pb-16">
-      <!-- PAGE TITLE -->
-      <section class="text-center mb-12">
-        <h1 class="text-3xl font-semibold text-[#2b0504]">
-        Our Services
-        </h1>
-       
-      </section>
+    <div class="pt-24"></div>
 
-      <!-- FIXED GRID: 3 SERVICES PER ROW -->
-      <section>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- PAGE HEADER -->
+    <section class="text-center mb-12">
+      <h1 class="text-3xl font-semibold text-[#2b0504]">
+        Immigration & Education Services
+      </h1>
+      <p class="mt-2 text-sm text-[#5b403a]">
+        Trusted support for your Canadian journey.
+      </p>
+    </section>
 
-          <!-- Service 1 -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
-            <img
-              src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/43cab5c24b37148a70f7c7adc0bef8716ccf6c49/images/Screenshot%202025-11-15%20at%2010.44.59%E2%80%AFPM.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-4 text-center font-semibold text-sm">
-              College Change Within Canada
-            </div>
+    <!-- SERVICES GRID (FULLY RESPONSIVE) -->
+    <section class="pb-12">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <!-- Service 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
+          <img
+            src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/43cab5c24b37148a70f7c7adc0bef8716ccf6c49/images/Screenshot%202025-11-15%20at%2010.44.59%E2%80%AFPM.png"
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-4 text-center font-semibold text-sm">
+            College Change Within Canada
           </div>
-
-          <!-- Service 2 -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
-            <img
-              src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.46.28%E2%80%AFPM.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-4 text-center font-semibold text-sm">
-              Study Visa from Outside Canada
-            </div>
-          </div>
-
-          <!-- Service 3 -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
-            <img
-              src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.48.28%E2%80%AFPM.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-4 text-center font-semibold text-sm">
-              Convert Visitor Visa to Study Visa
-            </div>
-          </div>
-
-          <!-- Service 4 -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
-            <img
-              src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.50.24%E2%80%AFPM.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-4 text-center font-semibold text-sm">
-              Spousal Open Work Permit & Sponsorship
-            </div>
-          </div>
-
-          <!-- Service 5 -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
-            <img
-              src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.52.18%E2%80%AFPM.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-4 text-center font-semibold text-sm">
-              Post Graduate Work Permit (PGWP)
-            </div>
-          </div>
-
-          <!-- Service 6 -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
-            <img
-              src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2011.00.48%E2%80%AFPM.png"
-              alt=""
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-4 text-center font-semibold text-sm">
-              Parents Visitor Visa
-            </div>
-          </div>
-
         </div>
-      </section>
-    </main>
+
+        <!-- Service 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
+          <img
+            src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.46.28%E2%80%AFPM.png"
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-4 text-center font-semibold text-sm">
+            Study Visa from Outside Canada
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
+          <img
+            src="https://raw.githubusercontentusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.48.28%E2%80%AFPM.png"
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-4 text-center font-semibold text-sm">
+            Convert Visitor Visa to Study Visa
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
+          <img
+            src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.50.24%E2%80%AFPM.png"
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-4 text-center font-semibold text-sm">
+            Spousal Open Work Permit & Sponsorship
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
+          <img
+            src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.52.18%E2%80%AFPM.png"
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-4 text-center font-semibold text-sm">
+            Post-Graduate Work Permit (PGWP)
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#f1ddbd]">
+          <img
+            src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2011.00.48%E2%80%AFPM.png"
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-4 text-center font-semibold text-sm">
+            Parents Visitor Visa
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[#2b0504] text-[#f4e3c3]/80 py-5 text-xs mt-10">
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-3"
-      >
-        <div>© 2025 Pardesi Consultancy. All rights reserved.</div>
-        <div>
-          Information provided is for general guidance and does not replace
-          official IRCC instructions.
-        </div>
+    <footer class="bg-[#2b0504] text-[#f4e3c3]/80 py-5 text-xs">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between">
+        <div>© 2025 Pardesi Consultancy</div>
+        <div>Information provided is for general guidance only</div>
       </div>
     </footer>
+
   </body>
 </html>
