@@ -6,66 +6,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Pardesi Consultancy</title>
 
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <style> body { font-family: 'Poppins', sans-serif; } </style>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
 
 <body class="bg-[#fff7e8] text-[#2b0504]">
 
   <!-- NAVBAR -->
-  <header class="bg-[#4a0e0a] text-[#f4e3c3] py-4">
+  <header class="bg-[#4a0e0a] text-[#f4e3c3] py-4 shadow-md sticky top-0 z-20">
     <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-[#2b0504] text-[#f4e3c3] flex items-center justify-center font-semibold">PC</div>
+        <div class="w-10 h-10 rounded-full bg-[#2b0504] text-[#f4e3c3] flex items-center justify-center font-semibold">
+          PC
+        </div>
         <h2 class="text-lg font-semibold">Pardesi Consultancy</h2>
       </div>
 
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="hover:text-white">Home</a>
         <a href="about.html" class="font-semibold underline">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html" class="hover:text-white">Services</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main class="max-w-6xl mx-auto px-4 py-20">
+  <!-- MAIN CONTENT -->
+  <main class="max-w-6xl mx-auto px-4 py-16 md:py-20">
 
-    <h1 class="text-3xl md:text-4xl font-semibold">About Pardesi Consultancy</h1>
+    <!-- TITLE -->
+    <h1 class="text-3xl md:text-4xl font-semibold text-[#2b0504]">
+      About Pardesi Consultancy
+    </h1>
 
-    <p class="mt-4 text-[#5b403a] leading-relaxed text-sm md:text-base">
-      Pardesi Consultancy helps Indian students and applicants plan their education and immigration pathway to Canada with clarity and confidence.
+    <p class="mt-4 text-[#5b403a] text-sm md:text-base leading-relaxed max-w-3xl">
+      Pardesi Consultancy was created with one purpose — to help students, skilled workers, and families 
+      from India achieve their Canadian education, career, and settlement goals with 
+      honesty, clarity, and personalized guidance.
     </p>
 
-    <div class="mt-10 grid md:grid-cols-2 gap-8">
+    <!-- FOUNDERS SECTION -->
+    <section class="mt-12 grid md:grid-cols-2 gap-10 items-start">
 
-      <div class="bg-white shadow-md border border-[#f1ddbd] rounded-2xl p-6">
-        <h3 class="text-lg font-semibold">Our Mission</h3>
-        <p class="mt-2 text-[#5b403a] text-sm">
-          To provide transparent, honest and practical guidance for individuals aspiring to study or build their future in Canada.
+      <!-- Founder 1 -->
+      <div class="bg-white border border-[#f1ddbd] rounded-2xl shadow-sm p-6">
+        <h3 class="text-2xl font-semibold mb-2">Sahil Vashisht</h3>
+        <p class="text-sm text-[#8b3a30] font-medium mb-4">Co-Founder & CEO</p>
+
+        <p class="text-sm text-[#5b403a] leading-relaxed">
+          With hands-on experience supporting newcomers, guiding international students, 
+          and understanding the real challenges Indians face when planning a move to Canada, 
+          Sahil specializes in providing the right direction from day one.
+          <br><br>
+          His focus is on strategic planning, identifying eligibility pathways, 
+          and helping clients avoid the common mistakes that lead to delays or refusals.
         </p>
       </div>
 
-      <div class="bg-white shadow-md border border-[#f1ddbd] rounded-2xl p-6">
-        <h3 class="text-lg font-semibold">Our Values</h3>
-        <ul class="mt-2 list-disc list-inside text-[#5b403a] text-sm space-y-1">
-          <li>Honesty and transparency</li>
-          <li>Client-first approach</li>
-          <li>Personalized guidance</li>
-          <li>Clear communication</li>
-        </ul>
+      <!-- Founder 2 -->
+      <div class="bg-white border border-[#f1ddbd] rounded-2xl shadow-sm p-6">
+        <h3 class="text-2xl font-semibold mb-2">Pooja Tiwari</h3>
+        <p class="text-sm text-[#8b3a30] font-medium mb-4">Co-Founder & CEO</p>
+
+        <p class="text-sm text-[#5b403a] leading-relaxed">
+          Pooja brings a compassionate and detail-oriented approach to student guidance, 
+          documentation support, and visa presentation. Being deeply familiar with the 
+          expectations of Canadian institutions and visa officers, she ensures every file is 
+          well-prepared and professionally structured.
+          <br><br>
+          Her strengths include student counselling, SOP assistance, and helping families 
+          prepare for long-term settlement success.
+        </p>
       </div>
 
-    </div>
+    </section>
+
+    <!-- HOW WE HELP SECTION -->
+    <section class="mt-16 bg-white border border-[#f1ddbd] rounded-2xl p-8 shadow-sm">
+
+      <h2 class="text-2xl font-semibold mb-4">How We Help You Achieve Your Canadian Dream</h2>
+
+      <p class="text-sm text-[#5b403a] leading-relaxed">
+        Whether your goal is <strong>Canadian education, PR, work opportunities, or family settlement</strong>, 
+        we provide step-by-step clarity to help you succeed.  
+      </p>
+
+      <ul class="mt-6 space-y-3 text-sm text-[#5b403a] leading-relaxed">
+        <li>✔ Personalized guidance based on your profile, not generic advice</li>
+        <li>✔ Honest assessment — no fake guarantees, no false promises</li>
+        <li>✔ College and program selection designed to increase approval chances</li>
+        <li>✔ Clear understanding of PR pathways (Express Entry, PNP, Work Visa)</li>
+        <li>✔ Document planning and SOP guidance that strengthens your case</li>
+        <li>✔ Support in English, Hindi, and Punjabi</li>
+        <li>✔ A compassionate, friendly approach — we treat every file like our own</li>
+      </ul>
+
+      <p class="mt-6 text-sm text-[#5b403a] leading-relaxed">
+        Our goal is simple: to make your journey smoother, easier, and more successful — 
+        with support you can trust.
+      </p>
+
+    </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-[#4a0e0a] text-[#f4e3c3]/80 text-xs py-4 text-center">
-    © 2025 Pardesi Consultancy
+  <footer class="bg-[#4a0e0a] text-[#f4e3c3]/80 py-4 text-xs text-center">
+    © 2025 Pardesi Consultancy. All rights reserved.
   </footer>
 
 </body>
