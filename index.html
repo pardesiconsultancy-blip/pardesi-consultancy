@@ -73,29 +73,39 @@
 
   <!-- HERO: minimal logo + name + slogan -->
   <main class="min-h-screen flex items-center justify-center">
-    <section class="w-full">
-      <div class="max-w-4xl mx-auto px-4 flex flex-col items-center text-center pt-20 pb-16">
-        <!-- Logo image (placeholder, replace later with real logo) -->
-        <div class="flex justify-center mb-6">
-          <img
-            src="https://placehold.co/500x500/4a0e0a/f4e3c3?text=PC"
-            alt="Pardesi Consultancy Logo"
-            class="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-2xl border border-gold/40 object-cover"
-          />
-        </div>
+  <section 
+    class="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
+    style="background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/prism.png');">
 
-        <!-- Company Name -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-cream drop-shadow-lg">
-          Pardesi Consultancy
-        </h1>
+    <!-- Dark Burgundy Overlay -->
+    <div class="absolute inset-0 bg-[#2b0504]/90 backdrop-blur-sm"></div>
 
-        <!-- Slogan -->
-        <p class="mt-4 text-lg sm:text-xl text-gold tracking-wide">
-          Where Growth Meets Success
-        </p>
+    <!-- Center Content -->
+    <div class="relative z-10 text-center px-4">
+
+      <!-- Logo -->
+      <div class="flex justify-center mb-6">
+        <img 
+          src="https://placehold.co/500x500/4a0e0a/f4e3c3?text=PC"
+          alt="Pardesi Consultancy Logo"
+          class="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-2xl border border-gold/40 object-cover"
+        />
       </div>
-    </section>
-  </main>
+
+      <!-- Company Name -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-cream drop-shadow-xl">
+        Pardesi Consultancy
+      </h1>
+
+      <!-- Slogan -->
+      <p class="mt-4 text-lg sm:text-xl md:text-2xl text-gold tracking-wide">
+        Where Growth Meets Success
+      </p>
+
+    </div>
+  </section>
+</main>
+
 
   <!-- FOOTER (shared) -->
   <footer class="bg-black text-gold/70 text-xs py-4">
