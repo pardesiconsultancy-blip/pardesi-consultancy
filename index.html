@@ -1,94 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pardesi Consultancy – Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Poppins", system-ui, sans-serif;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pardesi Consultancy | Where Growth Meets Success</title>
+  <body class="bg-[#2b0504] text-[#f4e3c3]">
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 bg-[#2b0504] text-[#f4e3c3] shadow-lg z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#f4e3c3] text-[#2b0504] font-bold flex items-center justify-center">PC</div>
+          <div>
+            <div class="text-xs tracking-[0.18em] uppercase text-[#f4e3c3]/70">Where Growth Meets Success</div>
+            <div class="text-base font-semibold">Pardesi Consultancy</div>
+          </div>
+        </a>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <a href="about.html" class="hover:text-white">About</a>
+          <a href="services.html" class="hover:text-white">Services</a>
+          <a href="contact.html" class="hover:text-white">Contact</a>
+        </nav>
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    /* REAL CHESS BACKGROUND IMAGE */
-    .chess-bg {
-      background-image: url('https://images.unsplash.com/photo-1528819622765-d6bcf132f793?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  </style>
-</head>
-
-<body class="bg-black text-white">
-
-  <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-30 bg-black/80 border-b border-gray-700 backdrop-blur">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-
-      <!-- LOGO -->
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-[#4a0e0a] flex items-center justify-center text-[#f4e3c3] font-bold">
-          PC
-        </div>
-        <div>
-          <div class="text-sm font-semibold text-[#f4e3c3]">Pardesi Consultancy</div>
-          <div class="text-xs text-[#f4e3c3]/70 tracking-wide">Where Growth Meets Success</div>
-        </div>
+        <!-- Mobile Menu -->
+        <button class="md:hidden text-2xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden');">☰</button>
       </div>
 
-      <!-- NAV MENU -->
-      <nav class="hidden md:flex items-center gap-6 text-sm text-[#f4e3c3]/80">
-        <a href="index.html" class="text-[#f4e3c3]">Home</a>
-        <a href="about.html" class="hover:text-white">About</a>
-        <a href="services.html" class="hover:text-white">Services</a>
-        <a href="contact.html" class="hover:text-white">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO SECTION WITH THE IMAGE YOU REQUESTED -->
-  <section class="chess-bg relative w-full h-screen flex items-center justify-center">
-
-    <!-- Dark burgundy overlay -->
-    <div class="absolute inset-0 bg-[#2b0504]/85"></div>
-
-    <!-- Content -->
-    <div class="relative z-10 text-center px-4">
-
-      <!-- Logo -->
-      <div class="flex justify-center mb-6">
-        <img
-          src="https://placehold.co/200x200/4a0e0a/f4e3c3?text=PC"
-          class="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-xl border border-[#f4e3c3]/40 object-cover"
-        />
+      <!-- Mobile dropdown -->
+      <div id="mobileMenu" class="md:hidden hidden bg-[#2b0504] text-[#f4e3c3] border-t border-[#f4e3c3]/20">
+        <a href="index.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">Home</a>
+        <a href="about.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">About</a>
+        <a href="services.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">Services</a>
+        <a href="contact.html" class="block px-4 py-3">Contact</a>
       </div>
+    </header>
 
-      <!-- Company Name -->
-      <h1 class="text-4xl md:text-5xl font-semibold text-[#f4e3c3] drop-shadow-xl">
-        Pardesi Consultancy
-      </h1>
+    <div class="pt-24"></div>
 
-      <!-- Slogan -->
-      <p class="mt-4 text-xl md:text-2xl text-[#f4e3c3]/90 tracking-wide">
-        Where Growth Meets Success
-      </p>
+    <!-- HERO SECTION WITH CHESS IMAGE -->
+    <section class="relative h-[90vh] w-full">
+      <img
+        src="https://images.unsplash.com/photo-1528819622765-d6bcf132f793?auto=format&fit=crop&w=1600&q=80"
+        class="absolute inset-0 w-full h-full object-cover opacity-40"
+      />
 
-    </div>
-  </section>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+        <h1 class="text-4xl md:text-5xl font-bold text-[#f4e3c3] drop-shadow">
+          Expert advice for your Canada journey.
+        </h1>
+        <p class="mt-4 max-w-xl text-sm text-[#f4e3c3]/90">
+          Helping students, families, and professionals achieve their Canadian dreams through honest, experience-based guidance.
+        </p>
+      </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-black text-[#f4e3c3]/70 text-xs py-4 text-center">
-    © 2025 Pardesi Consultancy. All rights reserved.
-  </footer>
-
-</body>
-
+    <!-- FOOTER -->
+    <footer class="bg-[#000000] text-[#f4e3c3]/70 py-5 text-xs mt-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between">
+        <div>© 2025 Pardesi Consultancy</div>
+        <div>Trusted Canada Immigration & Education Guidance</div>
+      </div>
+    </footer>
+  </body>
 </html>
