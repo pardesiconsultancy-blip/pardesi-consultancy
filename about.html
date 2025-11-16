@@ -1,95 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us – Pardesi Consultancy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { font-family: "Poppins", system-ui, sans-serif; }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Pardesi Consultancy</title>
+  <body class="bg-[#fff7e8] text-[#2b0504]">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- NAVBAR -->
+    <!-- (same navbar as INDEX — copy/paste EXACT SAME CODE here) -->
+    <!-- START NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 bg-[#2b0504] text-[#f4e3c3] shadow-lg z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#f4e3c3] text-[#2b0504] font-bold flex items-center justify-center">PC</div>
+          <div>
+            <div class="text-xs tracking-[0.18em] uppercase text-[#f4e3c3]/70">Where Growth Meets Success</div>
+            <div class="text-base font-semibold">Pardesi Consultancy</div>
+          </div>
+        </a>
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
-</head>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <a href="about.html" class="font-semibold text-white">About</a>
+          <a href="services.html" class="hover:text-white">Services</a>
+          <a href="contact.html" class="hover:text-white">Contact</a>
+        </nav>
 
-<body class="bg-[#fff7e8] text-[#2b0504]">
-
-  <!-- NAVBAR -->
-  <header class="bg-[#4a0e0a] text-[#f4e3c3] py-4 shadow-md sticky top-0 z-20">
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
-
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-[#2b0504] text-[#f4e3c3] flex items-center justify-center font-semibold">
-          PC
-        </div>
-        <h2 class="text-lg font-semibold">Pardesi Consultancy</h2>
+        <button class="md:hidden text-2xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden');">☰</button>
       </div>
 
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html" class="hover:text-white">Home</a>
-        <a href="about.html" class="font-semibold underline">About</a>
-        <a href="services.html" class="hover:text-white">Services</a>
-        <a href="contact.html" class="hover:text-white">Contact</a>
-      </nav>
-    </div>
-  </header>
+      <div id="mobileMenu" class="md:hidden hidden bg-[#2b0504] text-[#f4e3c3] border-t border-[#f4e3c3]/20">
+        <a href="index.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">Home</a>
+        <a href="about.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">About</a>
+        <a href="services.html" class="block px-4 py-3 border-b border-[#f4e3c3]/10">Services</a>
+        <a href="contact.html" class="block px-4 py-3">Contact</a>
+      </div>
+    </header>
+    <!-- END NAVBAR -->
 
-  <!-- MAIN CONTENT -->
-  <main class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <div class="pt-24"></div>
 
-    <!-- TITLE -->
-    <h1 class="text-3xl md:text-4xl font-semibold text-[#2b0504]">
-      About Pardesi Consultancy
-    </h1>
+    <!-- ABOUT SECTION -->
+    <section class="max-w-5xl mx-auto px-6 py-12">
+      <h1 class="text-3xl font-semibold mb-6">About Us</h1>
 
-    <p class="mt-4 text-[#5b403a] text-sm md:text-base leading-relaxed max-w-3xl">
-      Pardesi Consultancy is built on one simple belief — <strong>real guidance comes from real experience.</strong>
-      As a husband-and-wife team, we personally walked the same path you are dreaming of today. From leaving India as
-      international students to navigating studies, work permits, financial struggles, visas, rejections, approvals,
-      and finally permanent residency — we lived the Canadian journey deeply and honestly.
-    </p>
-
-    <!-- UNITED FOUNDERS STORY -->
-    <section class="mt-12 bg-white border border-[#f1ddbd] rounded-2xl shadow-sm p-8">
-
-      <h2 class="text-2xl font-semibold mb-4">Our Story & Mission</h2>
-
-      <p class="text-sm text-[#5b403a] leading-relaxed mb-6">
-        We — <strong>Pooja Tiwari</strong> and <strong>Sahil Vashisht</strong> — came to Canada as international students
-        with big dreams, limited information, and the same fears and doubts many students and families face today.
-        We struggled through paperwork, immigration rules, financial challenges, course choices, job searches, and the
-        uncertainty of starting life in a new country.
+      <p class="text-[#5b403a] leading-relaxed text-sm">
+        We are <strong>Pooja Tiwari and Sahil Vashisht</strong>, the founders of Pardesi Consultancy — a husband-and-wife team dedicated to guiding students and families through their Canadian education and immigration journey.
       </p>
 
-      <p class="text-sm text-[#5b403a] leading-relaxed mb-6">
-        Going through each step ourselves taught us what no website, agent, or checklist ever explains —
-        <strong>the real-life side of the process.</strong> We learned what works, what doesn’t, and how one wrong move
-        can delay your dreams. Over the years, Sahil secured Permanent Residency in Canada, and together we built a
-        strong understanding of the Canadian immigration and education system from real experience — not theory.
+      <p class="mt-4 text-[#5b403a] leading-relaxed text-sm">
+        We both came to Canada as international students, facing the same challenges, confusion, fear, and excitement that every newcomer goes through. We handled college admissions, program changes, visas, study extensions, work permits, and later, permanent residency. These experiences shaped our understanding deeply — not from theory, but from real life.
       </p>
 
-      <p class="text-sm text-[#5b403a] leading-relaxed">
-        Today, we use that knowledge to help others avoid mistakes, choose the right path, and make confident decisions.
-        Whether you want to study, work, or build a long-term future in Canada, our guidance comes from a place of
-        honesty, clarity, and lived experience. We treat every client like family — because we know exactly what it feels
-        like to be in your shoes.
+      <p class="mt-4 text-[#5b403a] leading-relaxed text-sm">
+        Sahil eventually achieved his Canadian Permanent Residency, and together we decided to use our life lessons, mistakes, and knowledge to guide others. Today, we proudly help students, couples, and families confidently plan their pathways to Canada with clarity and honesty.
       </p>
 
+      <p class="mt-4 text-[#5b403a] leading-relaxed text-sm">
+        We treat every case the way we treated our own journey — with care, discipline, transparency, and a “family-first” mindset.
+      </p>
     </section>
 
-  </main>
+    <!-- FOOTER -->
+    <footer class="bg-[#2b0504] text-[#f4e3c3]/80 py-5 text-xs mt-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between">
+        <div>© 2025 Pardesi Consultancy</div>
+        <div>Helping students & families achieve their Canadian dreams</div>
+      </div>
+    </footer>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#4a0e0a] text-[#f4e3c3]/80 py-4 text-xs text-center">
-    © 2025 Pardesi Consultancy. All rights reserved.
-  </footer>
-
-</body>
+  </body>
 </html>
