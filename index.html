@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,106 +9,83 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Custom Theme -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            burgundy: "#4a0e0a",
-            deepburgundy: "#120606",
-            cream: "#fff7e8",
-            gold: "#f4e3c3",
-            charcoal: "#1b1b1b",
-          }
-        }
-      }
-    }
-  </script>
-
   <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: "Poppins", sans-serif;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* REAL CHESS BACKGROUND HERE */
+    .chess-bg {
+      background-image: url('https://images.unsplash.com/photo-1610890716170-5f9d7fb8d108?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   </style>
 </head>
 
-<body class="bg-deepburgundy text-cream">
+<body class="bg-black text-white">
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-30 bg-deepburgundy/95 border-b border-gold/20 backdrop-blur">
+  <header class="fixed top-0 left-0 right-0 z-30 bg-black/80 border-b border-gray-700 backdrop-blur">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
 
-      <!-- LOGO -->
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-gold text-xs font-semibold shadow-md">
+        <div class="w-10 h-10 rounded-full bg-[#4a0e0a] flex items-center justify-center text-[#f4e3c3] font-bold">
           PC
         </div>
         <div>
-          <div class="text-sm font-semibold text-cream">Pardesi Consultancy</div>
-          <div class="text-[10px] tracking-[0.18em] uppercase text-gold/80">Where Growth Meets Success</div>
+          <div class="text-sm font-semibold text-[#f4e3c3]">Pardesi Consultancy</div>
+          <div class="text-xs text-[#f4e3c3]/70 tracking-wide">Where Growth Meets Success</div>
         </div>
       </div>
 
-      <!-- NAV LINKS -->
-      <nav class="hidden md:flex items-center gap-6 text-xs text-gold/80 tracking-[0.16em] uppercase">
-        <a href="index.html" class="text-gold">Home</a>
-        <a href="about.html" class="hover:text-cream transition">About</a>
-        <a href="services.html" class="hover:text-cream transition">Services</a>
-        <a href="contact.html" class="hover:text-cream transition">Contact</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-[#f4e3c3]/80">
+        <a href="index.html" class="text-[#f4e3c3]">Home</a>
+        <a href="about.html" class="hover:text-white">About</a>
+        <a href="services.html" class="hover:text-white">Services</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO WITH REAL CHESS GAME BACKGROUND -->
-  <main class="min-h-screen flex items-center justify-center">
-    <section 
-      class="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
-      style="background-image: url('https://images.unsplash.com/photo-1610890716170-5f9d7fb8d108?auto=format&fit=crop&w=1600&q=80');">
+  <!-- HERO SECTION WITH REAL CHESS BACKGROUND -->
+  <section class="chess-bg relative w-full h-screen flex items-center justify-center">
 
-      <!-- Dark Burgundy Overlay -->
-      <div class="absolute inset-0 bg-[#2b0504]/88 backdrop-blur-[1px]"></div>
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-[#2b0504]/85"></div>
 
-      <!-- CENTERED CONTENT -->
-      <div class="relative z-10 text-center px-4">
+    <div class="relative z-10 text-center px-4">
 
-        <!-- LOGO IMAGE -->
-        <div class="flex justify-center mb-6">
-          <img 
-            src="https://placehold.co/500x500/4a0e0a/f4e3c3?text=PC"
-            alt="Pardesi Consultancy Logo"
-            class="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-2xl border border-gold/40 object-cover"
-          />
-        </div>
-
-        <!-- COMPANY NAME -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-cream drop-shadow-xl">
-          Pardesi Consultancy
-        </h1>
-
-        <!-- SLOGAN -->
-        <p class="mt-4 text-lg sm:text-xl md:text-2xl text-gold tracking-wide">
-          Where Growth Meets Success
-        </p>
+      <!-- Logo -->
+      <div class="flex justify-center mb-6">
+        <img
+          src="https://placehold.co/200x200/4a0e0a/f4e3c3?text=PC"
+          class="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-xl border border-[#f4e3c3]/40 object-cover"
+        />
       </div>
-    </section>
-  </main>
+
+      <!-- Company Name -->
+      <h1 class="text-4xl md:text-5xl font-semibold text-[#f4e3c3] drop-shadow-xl">
+        Pardesi Consultancy
+      </h1>
+
+      <!-- Slogan -->
+      <p class="mt-4 text-xl md:text-2xl text-[#f4e3c3]/90 tracking-wide">
+        Where Growth Meets Success
+      </p>
+
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="bg-black text-gold/70 text-xs py-4">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-2">
-      <div>© 2025 Pardesi Consultancy. All rights reserved.</div>
-      <div class="text-[10px]">General guidance only — always verify with official IRCC resources.</div>
-    </div>
+  <footer class="bg-black text-[#f4e3c3]/70 text-xs py-4 text-center">
+    © 2025 Pardesi Consultancy. All rights reserved.
   </footer>
 
 </body>
+
 </html>
