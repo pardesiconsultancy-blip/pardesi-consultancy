@@ -1,12 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pardesi Consultancy | Canada Immigration Guidance</title>
+  <title>Pardesi Consultancy | Canada Guidance</title>
 
-  <!-- Tailwind CDN (Correct) -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Custom Tailwind Colors -->
+  <!-- Custom Tailwind Theme -->
   <script>
     tailwind.config = {
       theme: {
@@ -32,426 +34,339 @@
 
   <style>
     body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
+      font-family: "Poppins", sans-serif;
     }
   </style>
 </head>
 
+<body class="bg-[#120606]">
 
-<body class="bg-[#120606] text-[#1b1b1b]">
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 right-0 z-30 bg-[#120606]/95 border-b border-gold/10 backdrop-blur">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
-  <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-30 bg-[#120606]/95 border-b border-[#f4e3c3]/10 backdrop-blur">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-[#f4e3c3] flex items-center justify-center text-[#2b0504] font-bold">
-          P
-        </div>
-        <div>
-          <div class="text-sm tracking-[0.18em] uppercase text-[#f4e3c3]/70">
-            Immigration & Visa
-          </div>
-          <div class="text-base font-semibold text-[#f4e3c3]">
-            Pardesi Consultancy
-          </div>
-        </div>
+    <!-- Branding -->
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-[#2b0504] font-bold text-sm">
+        PC
       </div>
 
-      <nav class="hidden md:flex items-center gap-6 text-sm text-[#f4e3c3]/80">
-        <a href="#services" class="hover:text-white transition">Services</a>
-        <a href="#process" class="hover:text-white transition">Process</a>
-        <a href="#why" class="hover:text-white transition">Why Us</a>
-        <a href="#contact" class="hover:text-white transition">Contact</a>
-      </nav>
-
-      <a
-        href="#contact"
-        class="hidden md:inline-flex items-center text-xs tracking-[0.16em] uppercase border border-[#f4e3c3]/50 text-[#f4e3c3] px-4 py-2 rounded-full hover:bg-[#f4e3c3]/10 transition"
-      >
-        Free Consultation
-      </a>
+      <div>
+        <div class="text-[15px] font-semibold text-gold">
+          Pardesi Consultancy
+        </div>
+        <div class="text-[11px] tracking-[0.18em] uppercase text-gold/70">
+          Where Growth Meets Success
+        </div>
+      </div>
     </div>
-  </header>
 
-  <main class="pt-20">
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center gap-8 text-sm text-gold/80">
+      <a href="#services" class="hover:text-white transition">Services</a>
+      <a href="#process" class="hover:text-white transition">Process</a>
+      <a href="#why" class="hover:text-white transition">Why Us</a>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
+    </nav>
 
-    <!-- HERO -->
-    <section class="bg-gradient-to-br from-[#2b0504] via-[#120606] to-black text-[#fdf5e7]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
-        <!-- Left content -->
-        <div>
-          <p class="text-xs font-medium tracking-[0.25em] uppercase text-[#f4e3c3]/80">
-            Canada Immigration • Study • PR • Work
-          </p>
-          <h1 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-            Luxury-level guidance<br />
-            for your <span class="text-[#f4e3c3]">Canada journey</span>.
-          </h1>
-          <p class="mt-5 text-sm sm:text-base text-[#f4e3c3]/80 max-w-xl">
-            We help serious applicants from India build strong, well-planned
-            immigration files for Canada — PR, Study Visa, Work Permit, PNP,
-            and Family Sponsorship. Honest advice, clear steps, and
-            attention to detail.
-          </p>
+    <!-- CTA -->
+    <a
+      href="#contact"
+      class="hidden md:inline-flex items-center text-xs tracking-[0.16em] uppercase border border-gold/50 text-gold px-5 py-2 rounded-full hover:bg-gold/10 transition"
+    >
+      Free Consultation
+    </a>
+  </div>
+</header>
 
-          <div class="mt-7 flex flex-wrap items-center gap-4">
-            <a
-              href="#contact"
-              class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#f4e3c3] text-[#2b0504] text-sm font-medium shadow-lg shadow-black/30 hover:bg-white transition"
-            >
-              Book Free 15-Min Call
-            </a>
-            <a
-              href="#services"
-              class="inline-flex items-center text-xs tracking-[0.16em] uppercase text-[#f4e3c3]/80 hover:text-[#f4e3c3] transition"
-            >
-              View services
-            </a>
-          </div>
+<main class="pt-24">
 
-          <div class="mt-6 grid grid-cols-3 gap-4 text-xs text-[#f4e3c3]/80">
-            <div>
-              <div class="text-lg font-semibold text-[#f4e3c3]">100+</div>
-              <div class="mt-1">Profiles assessed</div>
-            </div>
-            <div>
-              <div class="text-lg font-semibold text-[#f4e3c3]">India ➜ Canada</div>
-              <div class="mt-1">Specialized focus</div>
-            </div>
-            <div>
-              <div class="text-lg font-semibold text-[#f4e3c3]">Honest</div>
-              <div class="mt-1">clear guidance</div>
-            </div>
-          </div>
-        </div>
+<!-- HERO -->
+<section class="bg-gradient-to-br from-[#4a0e0a] via-[#611010] to-[#2b0504] text-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-28 grid md:grid-cols-2 gap-16 items-center">
 
-        <!-- Right side visual / card -->
-        <div class="relative">
-          <div class="absolute -inset-4 bg-gradient-to-br from-[#f4e3c3]/5 via-transparent to-[#f4e3c3]/10 rounded-3xl blur-2xl"></div>
-          <div class="relative bg-[#1b0706] rounded-3xl border border-[#f4e3c3]/15 shadow-2xl p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <div>
-                <div class="text-xs text-[#f4e3c3]/60">Primary destination</div>
-                <div class="text-sm font-semibold text-[#f4e3c3]">Canada • PR / Study / Work</div>
-              </div>
-              <div class="w-10 h-10 rounded-full border border-[#f4e3c3]/40 flex items-center justify-center text-[#f4e3c3] text-xs">
-                CA
-              </div>
-            </div>
-            <div class="border-t border-[#f4e3c3]/10 pt-4 space-y-3 text-xs text-[#f4e3c3]/80">
-              <div class="flex justify-between">
-                <span>Profile Review</span>
-                <span class="text-[#f4e3c3] font-medium">Included</span>
-              </div>
-              <div class="flex justify-between">
-                <span>Visa Category Mapping</span>
-                <span class="text-[#f4e3c3] font-medium">Included</span>
-              </div>
-              <div class="flex justify-between">
-                <span>Step-by-Step Roadmap</span>
-                <span class="text-[#f4e3c3] font-medium">Included</span>
-              </div>
-            </div>
-            <div class="border-t border-[#f4e3c3]/10 pt-4 text-xs text-[#f4e3c3]/70">
-              “We treat every case like our own file — with discipline, timelines,
-              and clear communication.”
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- LEFT -->
+    <div>
+      <p class="text-xs font-medium tracking-[0.25em] uppercase text-gold/80">
+        CANADA EDUCATION • STUDY • PR • WORK
+      </p>
 
-    <!-- SERVICES -->
-    <section id="services" class="bg-[#fff7e8] text-[#1b1b1b]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-16">
-        <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
-          <div>
-            <p class="text-xs tracking-[0.2em] uppercase text-[#8b3a30]">
-              Services
-            </p>
-            <h2 class="text-2xl md:text-3xl font-semibold mt-2 text-[#2b0504]">
-              Tailored support for every Canada pathway.
-            </h2>
-          </div>
-          <p class="text-sm md:max-w-md text-[#5b403a]">
-            From first profile check to final submission, we help you avoid
-            common mistakes and structure your documents in a professional way.
-          </p>
-        </div>
+      <h1 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+        Get expert advice <br />
+        for your <span class="text-gold">Canada journey</span>.
+      </h1>
 
-        <div class="mt-8 grid md:grid-cols-3 gap-6">
-          <!-- Card -->
-          <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
-            <h3 class="text-sm font-semibold text-[#2b0504]">
-              Express Entry • PR
-            </h3>
-            <p class="mt-2 text-xs text-[#6f534c]">
-              CRS review, NOC selection, document planning, profile creation and
-              ITA stage guidance.
-            </p>
-          </div>
+      <p class="mt-6 text-sm sm:text-base text-gold/80 max-w-xl">
+        We help applicants from India plan their Canada journey with clear steps, 
+        professional guidance, and precise profile assessment for Study, PR, PNP, and Work pathways.
+      </p>
 
-          <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
-            <h3 class="text-sm font-semibold text-[#2b0504]">
-              Study Visa (India ➜ Canada)
-            </h3>
-            <p class="mt-2 text-xs text-[#6f534c]">
-              Program & college selection guidance, SOP structure, financial
-              proof and file presentation.
-            </p>
-          </div>
-
-          <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
-            <h3 class="text-sm font-semibold text-[#2b0504]">
-              Work Permit & LMIA-based Options
-            </h3>
-            <p class="mt-2 text-xs text-[#6f534c]">
-              High-level overview of employer requirements, categories,
-              documentation and timelines.
-            </p>
-          </div>
-
-          <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
-            <h3 class="text-sm font-semibold text-[#2b0504]">
-              PNP Strategy (Provinces)
-            </h3>
-            <p class="mt-2 text-xs text-[#6f534c]">
-              Understanding which provinces match your profile, draw trends,
-              and realistic options.
-            </p>
-          </div>
-
-          <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
-            <h3 class="text-sm font-semibold text-[#2b0504]">
-              Family Sponsorship
-            </h3>
-            <p class="mt-2 text-xs text-[#6f534c]">
-              Spousal, dependent child and parent sponsorship guidance, forms,
-              and key do’s & don’ts.
-            </p>
-          </div>
-
-          <div class="bg-white rounded-2xl border border-[#f1ddbd] shadow-sm p-5">
-            <h3 class="text-sm font-semibold text-[#2b0504]">
-              Profile & IELTS Roadmap
-            </h3>
-            <p class="mt-2 text-xs text-[#6f534c]">
-              What IELTS score, funds, and experience you realistically need
-              for your target pathway.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="bg-[#120606] text-[#fdf5e7]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-16">
-        <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
-          <div>
-            <p class="text-xs tracking-[0.2em] uppercase text-[#f4e3c3]/80">
-              Process
-            </p>
-            <h2 class="text-2xl md:text-3xl font-semibold mt-2 text-white">
-              A clear, three-step experience.
-            </h2>
-          </div>
-        </div>
-
-        <div class="mt-8 grid md:grid-cols-3 gap-6">
-          <div class="bg-[#1b0706] border border-[#f4e3c3]/15 rounded-2xl p-5">
-            <div class="text-xs text-[#f4e3c3]/70">Step 1</div>
-            <h3 class="mt-2 text-sm font-semibold text-[#fdf5e7]">
-              Free WhatsApp / Call Assessment
-            </h3>
-            <p class="mt-2 text-xs text-[#f4e3c3]/80">
-              We go through your profile details — age, IELTS, education,
-              experience, funds — and tell you what’s practical.
-            </p>
-          </div>
-
-          <div class="bg-[#1b0706] border border-[#f4e3c3]/15 rounded-2xl p-5">
-            <div class="text-xs text-[#f4e3c3]/70">Step 2</div>
-            <h3 class="mt-2 text-sm font-semibold text-[#fdf5e7]">
-              Roadmap & Document Planning
-            </h3>
-            <p class="mt-2 text-xs text-[#f4e3c3]/80">
-              You receive a clear, step-by-step outline — what to arrange,
-              which category to target, and a realistic timeline.
-            </p>
-          </div>
-
-          <div class="bg-[#1b0706] border border-[#f4e3c3]/15 rounded-2xl p-5">
-            <div class="text-xs text-[#f4e3c3]/70">Step 3</div>
-            <h3 class="mt-2 text-sm font-semibold text-[#fdf5e7]">
-              File Preparation Support
-            </h3>
-            <p class="mt-2 text-xs text-[#f4e3c3]/80">
-              Guidance as you prepare your file — document list, structure,
-              and key checks before submission.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY US -->
-    <section id="why" class="bg-[#fff7e8]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-16 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <p class="text-xs tracking-[0.2em] uppercase text-[#8b3a30]">
-            Why Pardesi
-          </p>
-          <h2 class="text-2xl md:text-3xl font-semibold mt-2 text-[#2b0504]">
-            Made for Indian applicants targeting Canada.
-          </h2>
-          <p class="mt-4 text-sm text-[#5b403a]">
-            We understand the ground reality — from education gaps and
-            multiple job changes to backlogs and funds. Our focus is to give
-            you honest feedback and a plan you can actually follow.
-          </p>
-
-          <ul class="mt-4 text-sm text-[#5b403a] space-y-2">
-            <li>• Clear communication in English & Hindi (and Punjabi if needed).</li>
-            <li>• Straightforward feedback — no fake guarantees.</li>
-            <li>• Flexible virtual consultations for clients in India & Canada.</li>
-          </ul>
-        </div>
-
-        <div class="space-y-4">
-          <div class="bg-white rounded-2xl border border-[#f1ddbd] p-4 text-sm text-[#5b403a] shadow-sm">
-            “I had so many doubts about PR vs Study Visa. After one detailed
-            session, my direction was totally clear.”
-            <div class="mt-2 text-xs text-[#8b3a30]">Client from Punjab</div>
-          </div>
-          <div class="bg-white rounded-2xl border border-[#f1ddbd] p-4 text-sm text-[#5b403a] shadow-sm">
-            “They didn’t sugarcoat anything. They told me exactly what to fix
-            before even thinking about Canada.”
-            <div class="mt-2 text-xs text-[#8b3a30]">Client from Gujarat</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="bg-[#2b0504] text-[#fdf5e7]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-16 grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <p class="text-xs tracking-[0.2em] uppercase text-[#f4e3c3]/80">
-            Contact
-          </p>
-          <h2 class="text-2xl md:text-3xl font-semibold mt-2 text-white">
-            Book a free 15-minute consultation.
-          </h2>
-          <p class="mt-4 text-sm text-[#f4e3c3]/80">
-            Share your basic details and preferred pathway. We’ll get back to
-            you with available time slots on call or WhatsApp.
-          </p>
-
-          <div class="mt-6 space-y-2 text-sm text-[#f4e3c3]/85">
-            <div>📍 Based in Ontario, serving clients across India & Canada</div>
-            <div>📞 Phone / WhatsApp: <span class="font-semibold">+1 (555) 123-4567</span></div>
-            <div>✉️ Email: <span class="font-semibold">hello@pardesiconsultancy.ca</span></div>
-          </div>
-        </div>
-
-        <form
-          class="bg-[#120606] border border-[#f4e3c3]/20 rounded-2xl p-6 space-y-4 shadow-xl shadow-black/40"
-          onsubmit="sendEmail(event)"
+      <div class="mt-8 flex flex-wrap items-center gap-5">
+        <a
+          href="#contact"
+          class="inline-flex items-center justify-center px-7 py-3 rounded-full bg-gold text-[#2b0504] text-sm font-medium shadow-lg shadow-black/30 hover:bg-white transition"
         >
-          <div>
-            <label class="text-xs text-[#f4e3c3]/80">Full Name</label>
-            <input
-              class="mt-1 w-full rounded-md bg-[#1b0706] border border-[#f4e3c3]/20 px-3 py-2 text-sm text-[#fdf5e7] outline-none focus:ring-1 focus:ring-[#f4e3c3]"
-              name="name"
-              required
-            />
-          </div>
-
-          <div>
-            <label class="text-xs text-[#f4e3c3]/80">Email</label>
-            <input
-              type="email"
-              class="mt-1 w-full rounded-md bg-[#1b0706] border border-[#f4e3c3]/20 px-3 py-2 text-sm text-[#fdf5e7] outline-none focus:ring-1 focus:ring-[#f4e3c3]"
-              name="email"
-              required
-            />
-          </div>
-
-          <div>
-            <label class="text-xs text-[#f4e3c3]/80">Preferred Pathway</label>
-            <select
-              class="mt-1 w-full rounded-md bg-[#1b0706] border border-[#f4e3c3]/20 px-3 py-2 text-sm text-[#fdf5e7] outline-none focus:ring-1 focus:ring-[#f4e3c3]"
-              name="pathway"
-            >
-              <option>Express Entry / PR</option>
-              <option>Study Visa</option>
-              <option>Work Permit</option>
-              <option>PNP</option>
-              <option>Visitor Visa</option>
-              <option>Family Sponsorship</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="text-xs text-[#f4e3c3]/80">Message</label>
-            <textarea
-              class="mt-1 w-full rounded-md bg-[#1b0706] border border-[#f4e3c3]/20 px-3 py-2 text-sm text-[#fdf5e7] outline-none focus:ring-1 focus:ring-[#f4e3c3] h-24"
-              name="message"
-              placeholder="Share brief details about your profile and questions…"
-              required
-            ></textarea>
-          </div>
-
-          <button
-            class="w-full mt-2 inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#f4e3c3] text-[#2b0504] text-sm font-medium hover:bg-white transition"
-          >
-            Submit & Open Email
-          </button>
-
-          <p class="text-[11px] text-[#f4e3c3]/70">
-            This form opens your email app with your details pre-filled — no
-            data is stored on this website.
-          </p>
-        </form>
+          Book Free 15-Min Call
+        </a>
+        <a
+          href="#services"
+          class="inline-flex items-center text-xs tracking-[0.16em] uppercase text-gold/80 hover:text-gold transition"
+        >
+          View Services
+        </a>
       </div>
-    </section>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-black text-[#f4e3c3]/70 py-5 text-xs">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-3">
-      <div>© 2025 Pardesi Consultancy. All rights reserved.</div>
-      <div class="text-[11px]">
-        Information provided is for guidance only and does not replace official IRCC instructions.
+      <div class="mt-8 grid grid-cols-3 gap-6 text-xs text-gold/80">
+        <div>
+          <div class="text-lg font-semibold text-gold">100+</div>
+          <div class="mt-1">Profiles assessed</div>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-gold">India ➜ Canada</div>
+          <div class="mt-1">Specialized focus</div>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-gold">Honest</div>
+          <div class="mt-1">Clear guidance</div>
+        </div>
       </div>
     </div>
-  </footer>
 
-  <!-- Mailto form handler -->
-  <script>
-    function sendEmail(e) {
-      e.preventDefault();
-      const form = e.target;
-      const name = form.name.value;
-      const email = form.email.value;
-      const pathway = form.pathway.value;
-      const message = form.message.value;
+    <!-- RIGHT CARD -->
+    <div class="relative">
+      <div class="absolute -inset-4 bg-gradient-to-br from-gold/5 via-transparent to-gold/10 rounded-3xl blur-2xl"></div>
+      <div class="relative bg-[#1b0706] rounded-3xl border border-gold/20 shadow-2xl p-6 space-y-4">
 
-      const body =
-        `Name: ${name}%0D%0A` +
-        `Email: ${email}%0D%0A` +
-        `Preferred Pathway: ${pathway}%0D%0A%0D%0A` +
-        `Message:%0D%0A${message}`;
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-xs text-gold/60">Primary destination</div>
+            <div class="text-sm font-semibold text-gold">Canada • PR / Study / Work</div>
+          </div>
+          <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-gold text-xs">
+            CA
+          </div>
+        </div>
 
-      window.location.href =
-        `mailto:hello@pardesiconsultancy.ca?subject=Consultation Request from ${encodeURIComponent(
-          name
-        )}&body=${body}`;
-    }
-  </script>
+        <div class="border-t border-gold/10 pt-4 space-y-3 text-xs text-gold/80">
+          <div class="flex justify-between"><span>Profile Review</span> <span class="text-gold font-medium">Included</span></div>
+          <div class="flex justify-between"><span>Visa Category Mapping</span> <span class="text-gold font-medium">Included</span></div>
+          <div class="flex justify-between"><span>Step-by-Step Roadmap</span> <span class="text-gold font-medium">Included</span></div>
+        </div>
+
+        <div class="border-t border-gold/10 pt-4 text-xs text-gold/70">
+          “We treat every case like our own — with accuracy, timelines, and clear communication.”
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="bg-cream text-[#1b1b1b]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+    <p class="text-xs tracking-[0.2em] uppercase text-[#8b3a30]">Services</p>
+    <h2 class="text-2xl md:text-3xl font-semibold mt-2 text-richburgundy">
+      Tailored support for every Canada pathway.
+    </h2>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl border border-gold/30 shadow-sm p-5">
+        <h3 class="text-sm font-semibold text-richburgundy">Express Entry • PR</h3>
+        <p class="mt-2 text-xs text-[#6f534c]">CRS optimization, document planning, profile creation.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-gold/30 shadow-sm p-5">
+        <h3 class="text-sm font-semibold text-richburgundy">Study Visa</h3>
+        <p class="mt-2 text-xs text-[#6f534c]">SOP guidance, program selection, and financial planning.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-gold/30 shadow-sm p-5">
+        <h3 class="text-sm font-semibold text-richburgundy">Work Permit</h3>
+        <p class="mt-2 text-xs text-[#6f534c]">LMIA basics, employer requirements, documentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="bg-richburgundy text-gold">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+    <p class="text-xs tracking-[0.2em] uppercase text-gold/80">Process</p>
+    <h2 class="text-2xl md:text-3xl font-semibold mt-2 text-white">A clear three-step experience.</h2>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="bg-[#1b0706] p-5 border border-gold/15 rounded-2xl">
+        <h3 class="text-sm font-semibold text-gold">Step 1 — Free Call / WhatsApp Assessment</h3>
+        <p class="mt-2 text-xs text-gold/80">Profile check: IELTS, age, education, funds, goals.</p>
+      </div>
+
+      <div class="bg-[#1b0706] p-5 border border-gold/15 rounded-2xl">
+        <h3 class="text-sm font-semibold text-gold">Step 2 — Roadmap & Strategy</h3>
+        <p class="mt-2 text-xs text-gold/80">Clear instructions, category mapping, realistic timelines.</p>
+      </div>
+
+      <div class="bg-[#1b0706] p-5 border border-gold/15 rounded-2xl">
+        <h3 class="text-sm font-semibold text-gold">Step 3 — File Preparation Support</h3>
+        <p class="mt-2 text-xs text-gold/80">Document list, structure, quality review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="bg-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 gap-10">
+    
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-[#8b3a30]">Why Pardesi</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-richburgundy mt-2">
+        Made for Indian applicants aiming for Canada.
+      </h2>
+
+      <p class="mt-4 text-sm text-[#5b403a]">
+        We understand Indian profiles — gaps, job changes, education differences, 
+        and financial planning. We offer honest guidance and a practical plan.
+      </p>
+
+      <ul class="mt-4 space-y-2 text-sm text-[#5b403a]">
+        <li>• Communication in English, Hindi & Punjabi</li>
+        <li>• No false promises — clear, realistic guidance</li>
+        <li>• Virtual support across India & Canada</li>
+      </ul>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-white p-4 rounded-2xl border border-gold/30 shadow-sm text-sm text-[#5b403a]">
+        “One call cleared all my doubts about Study vs PR. Very honest guidance.”
+        <div class="mt-2 text-xs text-[#8b3a30]">Client from Punjab</div>
+      </div>
+      <div class="bg-white p-4 rounded-2xl border border-gold/30 shadow-sm text-sm text-[#5b403a]">
+        “They showed me exactly what to fix before applying. Very professional.”
+        <div class="mt-2 text-xs text-[#8b3a30]">Client from Gujarat</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-[#2b0504] text-gold">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 gap-10">
+
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-gold/80">Contact</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-white mt-2">
+        Book a free 15-minute consultation.
+      </h2>
+
+      <p class="mt-4 text-sm text-gold/80">
+        Share your details — we’ll respond with available WhatsApp or call slots.
+      </p>
+
+      <div class="mt-6 text-sm space-y-2 text-gold/85">
+        <div>📍 Ontario • Serving India & Canada</div>
+        <div>📞 WhatsApp: <span class="font-semibold">+1 (555) 123-4567</span></div>
+        <div>✉️ Email: <span class="font-semibold">hello@pardesiconsultancy.ca</span></div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form
+      class="bg-[#120606] border border-gold/20 rounded-2xl p-6 space-y-4 shadow-xl"
+      onsubmit="sendEmail(event)"
+    >
+      <div>
+        <label class="text-xs text-gold/80">Full Name</label>
+        <input
+          class="mt-1 w-full rounded-md bg-[#1b0706] border border-gold/20 px-3 py-2 text-sm text-cream focus:ring-1 focus:ring-gold"
+          name="name"
+          required
+        />
+      </div>
+
+      <div>
+        <label class="text-xs text-gold/80">Email</label>
+        <input
+          type="email"
+          class="mt-1 w-full rounded-md bg-[#1b0706] border border-gold/20 px-3 py-2 text-sm text-cream focus:ring-1 focus:ring-gold"
+          name="email"
+          required
+        />
+      </div>
+
+      <div>
+        <label class="text-xs text-gold/80">Preferred Pathway</label>
+        <select
+          class="mt-1 w-full rounded-md bg-[#1b0706] border border-gold/20 px-3 py-2 text-sm text-cream focus:ring-1 focus:ring-gold"
+          name="pathway"
+        >
+          <option>Education / Study Visa</option>
+          <option>PR / Express Entry</option>
+          <option>Work Permit</option>
+          <option>PNP</option>
+          <option>Visitor Visa</option>
+          <option>Family Sponsorship</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="text-xs text-gold/80">Message</label>
+        <textarea
+          class="mt-1 w-full rounded-md bg-[#1b0706] border border-gold/20 px-3 py-2 text-sm text-cream h-24 focus:ring-1 focus:ring-gold"
+          name="message"
+          placeholder="Tell us about your profile..."
+          required
+        ></textarea>
+      </div>
+
+      <button
+        class="w-full mt-2 inline-flex items-center justify-center px-4 py-2 rounded-full bg-gold text-[#2b0504] text-sm font-medium hover:bg-white transition"
+      >
+        Submit & Open Email
+      </button>
+
+      <p class="text-[11px] text-gold/60">
+        Your details open directly in your email app — nothing is stored on our website.
+      </p>
+    </form>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-gold/70 py-5 text-xs">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-3">
+    <div>© 2025 Pardesi Consultancy. All rights reserved.</div>
+    <div class="text-[11px]">
+      Content is guidance only — refer to official IRCC sources for final instructions.
+    </div>
+  </div>
+</footer>
+
+<!-- Email handler -->
+<script>
+  function sendEmail(e) {
+    e.preventDefault();
+    const f = e.target;
+    const name = f.name.value;
+    const email = f.email.value;
+    const pathway = f.pathway.value;
+    const message = f.message.value;
+
+    const body =
+      `Name: ${name}%0D%0A` +
+      `Email: ${email}%0D%0A` +
+      `Pathway: ${pathway}%0D%0A%0D%0A` +
+      `Message:%0D%0A${message}`;
+
+    window.location.href =
+      `mailto:hello@pardesiconsultancy.ca?subject=Consultation Request from ${encodeURIComponent(
+        name
+      )}&body=${body}`;
+  }
+</script>
+
 </body>
 </html>
