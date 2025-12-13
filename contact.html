@@ -59,8 +59,6 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://pardesiconsultancy.ca/contact.html" />
-
-    <!-- Simple icons (emoji used, no extra libs) -->
   </head>
 
   <body class="bg-[#fff7e8] text-[#2b0504]">
@@ -249,7 +247,7 @@
               <div>
                 <h2 class="text-lg sm:text-xl font-semibold">Quick Enquiry Form</h2>
                 <p class="text-sm text-[#5b403a] mt-1">
-                  Prefer typing? Send a quick message. (This form can be wired to email later.)
+                  Send a quick message. This goes directly to our inbox (Formspree).
                 </p>
               </div>
               <a
@@ -261,34 +259,44 @@
               </a>
             </div>
 
-            <!-- NOTE: This is a front-end form. To make it actually send emails, you’ll need Formspree / Netlify Forms / backend.
-                 Keeping it attractive + ready-to-copy as requested. -->
-            <form class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="return handleSubmit(event);">
+            <!-- ✅ CONNECTED TO FORMSPREE -->
+            <form
+              action="https://formspree.io/f/mblnwqyj"
+              method="POST"
+              class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4"
+              id="contactForm"
+            >
               <div>
                 <label class="text-sm font-semibold">Full Name</label>
                 <input
                   required
+                  name="name"
                   type="text"
                   class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
                   placeholder="Your name"
+                  autocomplete="name"
                 />
               </div>
 
               <div>
                 <label class="text-sm font-semibold">Phone (optional)</label>
                 <input
+                  name="phone"
                   type="tel"
                   class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
                   placeholder="e.g., +1 905-226-6327"
+                  autocomplete="tel"
                 />
               </div>
 
               <div>
                 <label class="text-sm font-semibold">Email (optional)</label>
                 <input
+                  name="email"
                   type="email"
                   class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
                   placeholder="you@example.com"
+                  autocomplete="email"
                 />
               </div>
 
@@ -296,6 +304,7 @@
                 <label class="text-sm font-semibold">Service Needed</label>
                 <select
                   required
+                  name="service"
                   class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
                 >
                   <option value="" disabled selected>Select one</option>
@@ -311,11 +320,16 @@
                 <label class="text-sm font-semibold">Your Message</label>
                 <textarea
                   required
+                  name="message"
                   rows="5"
                   class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
                   placeholder="Write your details here…"
                 ></textarea>
               </div>
+
+              <!-- Helpful hidden fields -->
+              <input type="hidden" name="_subject" value="New enquiry — Pardesi Consultancy" />
+              <input type="hidden" name="_format" value="plain" />
 
               <div class="sm:col-span-2 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
                 <button
@@ -334,7 +348,7 @@
             </form>
           </div>
 
-          <!-- Mini FAQ (boosts conversion) -->
+          <!-- Mini FAQ -->
           <div class="mt-6 bg-[#fff7e8] border border-[#2b0504]/10 rounded-3xl p-6 sm:p-8 shadow-sm">
             <h2 class="text-lg sm:text-xl font-semibold">Quick Questions</h2>
             <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
@@ -348,7 +362,10 @@
               </div>
               <div class="bg-white/70 border border-[#2b0504]/10 rounded-2xl p-5">
                 <div class="font-semibold">Do you offer calls?</div>
-                <p class="text-[#5b403a] mt-2">Yes. You can call <a class="underline font-semibold" href="tel:+19052266327">905-226-6327</a> or message on WhatsApp to schedule.</p>
+                <p class="text-[#5b403a] mt-2">
+                  Yes. You can call <a class="underline font-semibold" href="tel:+19052266327">905-226-6327</a>
+                  or message on WhatsApp to schedule.
+                </p>
               </div>
               <div class="bg-white/70 border border-[#2b0504]/10 rounded-2xl p-5">
                 <div class="font-semibold">Where are you based?</div>
@@ -360,7 +377,7 @@
       </div>
     </section>
 
-    <!-- Sticky mobile bar (big conversion boost) -->
+    <!-- Sticky mobile bar -->
     <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden">
       <div class="mx-auto max-w-6xl px-4 pb-4">
         <div class="bg-white/95 backdrop-blur border border-[#2b0504]/10 rounded-2xl shadow-lg p-3 flex gap-2">
@@ -389,7 +406,7 @@
       </div>
     </footer>
 
-    <!-- Schema (helps Google understand your contact info) -->
+    <!-- Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -417,18 +434,44 @@
     </script>
 
     <script>
-      // Simple UX: show a friendly confirmation (front-end only)
-      function handleSubmit(event) {
-        event.preventDefault();
+      // Nice success message while still sending to Formspree
+      (function () {
+        const form = document.getElementById("contactForm");
         const note = document.getElementById("formNote");
-        note.classList.remove("hidden");
-        note.classList.add("text-[#2b0504]");
-        note.textContent =
-          "✅ Thanks! Your enquiry is ready. For the fastest reply, please WhatsApp us now at 905-226-6327.";
-        // Optional: scroll to note
-        note.scrollIntoView({ behavior: "smooth", block: "center" });
-        return false;
-      }
+
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          note.classList.remove("hidden");
+          note.classList.remove("text-red-700");
+          note.classList.add("text-[#2b0504]");
+          note.textContent = "Sending your enquiry...";
+
+          try {
+            const formData = new FormData(form);
+            const res = await fetch(form.action, {
+              method: "POST",
+              body: formData,
+              headers: { Accept: "application/json" }
+            });
+
+            if (res.ok) {
+              form.reset();
+              note.textContent =
+                "✅ Thank you! We received your enquiry. For the fastest reply, WhatsApp us at 905-226-6327.";
+            } else {
+              note.classList.remove("text-[#2b0504]");
+              note.classList.add("text-red-700");
+              note.textContent =
+                "⚠️ Something went wrong. Please try again, or WhatsApp us at 905-226-6327.";
+            }
+          } catch (err) {
+            note.classList.remove("text-[#2b0504]");
+            note.classList.add("text-red-700");
+            note.textContent =
+              "⚠️ Network error. Please try again, or WhatsApp us at 905-226-6327.";
+          }
+        });
+      })();
     </script>
   </body>
 </html>
