@@ -26,7 +26,7 @@
       text-shadow: 0 0 10px var(--glow);
     }
 
-    /* ===== GOLD GLITTER (BODY COMPANY NAME ONLY) ===== */
+    /* GOLD GLITTER (BODY COMPANY NAME ONLY) */
     .gold-glitter {
       background: linear-gradient(
         120deg,
@@ -36,8 +36,8 @@
       );
       background-size: 200% auto;
       color: transparent;
-      background-clip: text;
       -webkit-background-clip: text;
+      background-clip: text;
       animation: glitter 4s linear infinite;
       text-shadow: 0 0 18px var(--glow);
     }
@@ -47,14 +47,13 @@
       100% { background-position: 0% center; }
     }
 
-    /* ===== LOGO BLEND FIX (iPhone Safari) ===== */
+    /* LOGO iPhone FIX */
     .brand-logo {
       display: block;
       background: transparent;
-      mix-blend-mode: lighten; /* Android + Desktop */
+      mix-blend-mode: lighten;
     }
 
-    /* Disable blend mode ONLY on iOS Safari */
     @supports (-webkit-touch-callout: none) {
       .brand-logo {
         mix-blend-mode: normal !important;
@@ -94,7 +93,7 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- MOBILE MENU BUTTON -->
+    <!-- MOBILE BUTTON -->
     <button
       class="md:hidden text-2xl"
       onclick="document.getElementById('mobileMenu').classList.toggle('hidden');"
@@ -126,7 +125,7 @@
       />
     </div>
 
-    <!-- COMPANY NAME WITH GLITTER -->
+    <!-- COMPANY NAME -->
     <h1 class="mt-6 text-4xl md:text-5xl uppercase font-normal gold-glitter">
       PARDESI CONSULTANCY
     </h1>
@@ -138,24 +137,29 @@
     <!-- ICON CONTACT -->
     <div class="mt-12 flex gap-5 justify-center">
 
-      <!-- WhatsApp -->
+      <!-- WhatsApp (CORRECT ICON) -->
       <a href="https://wa.me/19052266327"
          aria-label="WhatsApp"
          class="w-16 h-16 rounded-full flex items-center justify-center
                 border border-[var(--gold)] hover:opacity-85 transition">
+
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
              xmlns="http://www.w3.org/2000/svg"
              style="filter: drop-shadow(0 0 10px var(--glow));">
-          <path d="M12 21a9 9 0 1 0-7.7-4.3L3 21l4.5-1.2A9 9 0 0 0 12 21Z"
+          <path d="M20.5 11.9c0 4.7-3.9 8.6-8.6 8.6c-1.5 0-2.9-.4-4.1-1l-3.3 1
+                   1.1-3.2c-.8-1.3-1.2-2.8-1.2-4.4c0-4.7 3.9-8.6 8.6-8.6s8.5 3.8 8.5 8.6Z"
                 stroke="var(--gold)" stroke-width="1.8"
                 stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M9.2 8.9c.2-.5.5-.5.7-.5h.6c.2 0 .4 0 .5.3l.9 2.2c.1.3.1.6-.1.8l-.6.7c-.2.2-.1.5 0 .7.6 1 1.5 1.8 2.5 2.4.2.1.5.2.7 0l.8-.6c.2-.2.5-.2.8-.1l2.2.9c.2.1.3.3.3.5v.6c0 .2 0 .5-.5.7-.5.3-1.7.6-3.7-.1-2-.7-4.3-2.9-5.5-4.9-1.2-2-.8-3.2-.5-3.7Z"
+          <path d="M10.2 8.9c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.5.3l.7 1.7c.1.3.1.5 0 .7l-.4.5
+                   c-.2.2-.1.4 0 .6c.5.9 1.3 1.6 2.1 2.1c.2.1.4.2.6 0l.5-.4c.2-.1.5-.2.7-.1l1.7.7
+                   c.2.1.3.3.3.5v.5c0 .2-.1.5-.5.7c-.4.2-1.4.5-3-.1c-1.6-.6-3.5-2.3-4.5-3.9
+                   -1-1.6-.6-2.6-.4-3Z"
                 stroke="var(--gold)" stroke-width="1.8"
                 stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
 
-      <!-- Phone -->
+      <!-- PHONE -->
       <a href="tel:+19052266327"
          aria-label="Call"
          class="w-16 h-16 rounded-full flex items-center justify-center
@@ -163,7 +167,12 @@
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
              xmlns="http://www.w3.org/2000/svg"
              style="filter: drop-shadow(0 0 10px var(--glow));">
-          <path d="M6.5 3.8h2.1c.6 0 1.1.4 1.2 1l.5 2.3c.1.5-.1 1-.5 1.3l-1.3 1c1 1.9 2.6 3.5 4.5 4.5l1-1.3c.3-.4.8-.6 1.3-.5l2.3.5c.6.1 1 .6 1 1.2v2.1c0 .7-.5 1.3-1.2 1.4-1 .2-2.8.3-5.3-1-2.6-1.3-5.2-3.9-6.5-6.5-1.3-2.5-1.2-4.3-1-5.3.1-.7.7-1.2 1.4-1.2Z"
+          <path d="M6.5 3.8h2.1c.6 0 1.1.4 1.2 1l.5 2.3c.1.5-.1 1-.5 1.3l-1.3 1
+                   c1 1.9 2.6 3.5 4.5 4.5l1-1.3c.3-.4.8-.6 1.3-.5l2.3.5
+                   c.6.1 1 .6 1 1.2v2.1c0 .7-.5 1.3-1.2 1.4
+                   -1 .2-2.8.3-5.3-1-2.6-1.3-5.2-3.9-6.5-6.5
+                   -1.3-2.5-1.2-4.3-1-5.3
+                   .1-.7.7-1.2 1.4-1.2Z"
                 stroke="var(--gold)" stroke-width="1.8"
                 stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
