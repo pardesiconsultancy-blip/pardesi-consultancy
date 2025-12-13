@@ -9,159 +9,141 @@
 
   <style>
     :root{
-      /* 🔥 CHANGE THIS ONE VALUE to match your logo gold exactly */
       --burgundy: #2b0504;
-      --gold: #b08d2f; /* <- if logo is brighter, try #c9a13b or #d4af37 */
-      --glow: rgba(176,141,47,0.70); /* auto-updated if you change --gold below in the tailwind classes */
+      --gold: #b08d2f; /* MUST match logo gold */
     }
 
     body{
       font-family: "Poppins", system-ui, sans-serif;
       background: var(--burgundy);
       color: var(--gold);
-      /* “shine” for all text */
       text-shadow: 0 0 10px rgba(176,141,47,0.55);
     }
 
-    /* Force ALL text elements to gold + shine */
     a, p, h1, h2, h3, h4, h5, h6, span, li, div, button {
       color: var(--gold);
       text-shadow: 0 0 10px rgba(176,141,47,0.55);
     }
 
-    /* Prevent Tailwind color overrides */
-    .text-white, .text-black, .text-gray-100, .text-gray-200, .text-gray-300, .text-[#f4e3c3] {
+    /* ===== GOLD GLITTER EFFECT (BODY COMPANY NAME ONLY) ===== */
+    .gold-glitter {
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(
+        120deg,
+        var(--gold) 40%,
+        #fff2b0 50%,
+        var(--gold) 60%
+      );
+      background-size: 200% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: glitter 4s linear infinite;
+      text-shadow: 0 0 18px rgba(176,141,47,0.75);
+    }
+
+    @keyframes glitter {
+      0% { background-position: 200% center; }
+      100% { background-position: 0% center; }
+    }
+    /* ======================================================= */
+
+    /* Force Tailwind overrides */
+    .text-white, .text-black, .text-gray-100, .text-gray-200, .text-gray-300 {
       color: var(--gold) !important;
-      text-shadow: 0 0 10px rgba(176,141,47,0.55) !important;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 bg-[var(--burgundy)] border-b border-[var(--gold)]/40 shadow-lg z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 right-0 bg-[var(--burgundy)] border-b border-[var(--gold)]/40 shadow-lg z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
-      <!-- LOGO + NAME (name on top, slogan below) -->
-      <a href="index.html" class="flex items-center gap-3">
-        <!-- BIGGER LOGO -->
-        <img
-          src="/images/logo.png"
-          alt="Pardesi Consultancy Logo"
-          class="w-14 h-14 object-contain opacity-95
-                 drop-shadow-[0_0_16px_rgba(176,141,47,0.70)]
-                 mix-blend-lighten"
-        />
-
-        <div class="leading-tight">
-          <div class="text-base uppercase">
-            PARDESI CONSULTANCY
-          </div>
-          <div class="text-xs tracking-[0.18em] uppercase opacity-90">
-            Where Growth Meets Success
-          </div>
+    <!-- LOGO + NAME -->
+    <a href="index.html" class="flex items-center gap-3">
+      <img
+        src="/images/logo.png"
+        alt="Pardesi Consultancy Logo"
+        class="w-14 h-14 object-contain opacity-95
+               drop-shadow-[0_0_16px_rgba(176,141,47,0.7)]
+               mix-blend-lighten"
+      />
+      <div class="leading-tight">
+        <div class="text-base uppercase">PARDESI CONSULTANCY</div>
+        <div class="text-xs tracking-[0.18em] uppercase opacity-90">
+          Where Growth Meets Success
         </div>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm uppercase">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button
+      class="md:hidden text-2xl"
+      onclick="document.getElementById('mobileMenu').classList.toggle('hidden');"
+    >☰</button>
+  </div>
+</header>
+
+<div class="pt-28"></div>
+
+<!-- HERO -->
+<section class="h-[88vh] w-full flex items-center justify-center text-center px-6">
+  <div class="flex flex-col items-center">
+
+    <!-- BIG LOGO -->
+    <div class="w-40 h-40 flex items-center justify-center">
+      <img
+        src="/images/logo.png"
+        alt="Pardesi Consultancy Logo"
+        class="w-36 h-36 object-contain opacity-95
+               drop-shadow-[0_0_34px_rgba(176,141,47,0.8)]
+               mix-blend-lighten"
+      />
+    </div>
+
+    <!-- COMPANY NAME WITH GOLD GLITTER -->
+    <h1 class="mt-6 text-4xl md:text-5xl font-normal uppercase gold-glitter">
+      PARDESI CONSULTANCY
+    </h1>
+
+    <p class="mt-3 text-sm tracking-[0.25em] uppercase opacity-90">
+      Where Growth Meets Success
+    </p>
+
+    <!-- ICON ONLY CONTACT -->
+    <div class="mt-10 flex gap-4 justify-center">
+      <a href="https://wa.me/19052266327"
+         class="w-14 h-14 rounded-full flex items-center justify-center
+                border border-[var(--gold)] hover:opacity-85">
+        📱
       </a>
 
-      <!-- DESKTOP MENU -->
-      <nav class="hidden md:flex items-center gap-6 text-sm uppercase">
-        <a href="index.html" class="font-semibold">Home</a>
-        <a href="about.html" class="hover:opacity-80">About</a>
-        <a href="services.html" class="hover:opacity-80">Services</a>
-        <a href="contact.html" class="hover:opacity-80">Contact</a>
-      </nav>
-
-      <!-- MOBILE MENU BUTTON -->
-      <button
-        class="md:hidden text-2xl"
-        onclick="document.getElementById('mobileMenu').classList.toggle('hidden');"
-        aria-label="Open menu"
-      >☰</button>
+      <a href="tel:+19052266327"
+         class="w-14 h-14 rounded-full flex items-center justify-center
+                border border-[var(--gold)] hover:opacity-85">
+        📞
+      </a>
     </div>
 
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-[var(--gold)]/30 uppercase">
-      <a href="index.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">Home</a>
-      <a href="about.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">About</a>
-      <a href="services.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">Services</a>
-      <a href="contact.html" class="block px-4 py-3">Contact</a>
-    </div>
-  </header>
+  </div>
+</section>
 
-  <div class="pt-28"></div>
-
-  <!-- HERO -->
-  <section class="h-[88vh] w-full flex items-center justify-center text-center px-6">
-    <div class="flex flex-col items-center">
-
-      <!-- BIGGER HERO LOGO -->
-      <div class="w-40 h-40 flex items-center justify-center">
-        <img
-          src="/images/logo.png"
-          alt="Pardesi Consultancy Logo"
-          class="w-36 h-36 object-contain opacity-95
-                 drop-shadow-[0_0_34px_rgba(176,141,47,0.80)]
-                 mix-blend-lighten"
-        />
-      </div>
-
-      <!-- Company name: UNBOLD (as requested) -->
-      <h1 class="mt-6 text-4xl md:text-5xl font-normal uppercase">
-        PARDESI CONSULTANCY
-      </h1>
-
-      <p class="mt-3 text-sm tracking-[0.25em] uppercase opacity-90">
-        Where Growth Meets Success
-      </p>
-
-      <!-- ICON-ONLY CONTACT BUTTONS -->
-      <div class="mt-10 flex items-center gap-4 justify-center">
-        <!-- WhatsApp icon-only -->
-        <a
-          href="https://wa.me/19052266327"
-          aria-label="WhatsApp"
-          class="w-14 h-14 rounded-full flex items-center justify-center
-                 border border-[var(--gold)] bg-[var(--burgundy)]
-                 hover:opacity-85 transition"
-        >
-          <!-- WhatsApp SVG (gold) -->
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
-               xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 21a9 9 0 1 0-7.7-4.3L3 21l4.5-1.2A9 9 0 0 0 12 21Z"
-                  stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9.2 8.9c.2-.5.5-.5.7-.5h.6c.2 0 .4 0 .5.3l.9 2.2c.1.3.1.6-.1.8l-.6.7c-.2.2-.1.5 0 .7.6 1 1.5 1.8 2.5 2.4.2.1.5.2.7 0l.8-.6c.2-.2.5-.2.8-.1l2.2.9c.2.1.3.3.3.5v.6c0 .2 0 .5-.5.7-.5.3-1.7.6-3.7-.1-2-.7-4.3-2.9-5.5-4.9-1.2-2-.8-3.2-.5-3.7Z"
-                  stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-
-        <!-- Phone icon-only -->
-        <a
-          href="tel:+19052266327"
-          aria-label="Call"
-          class="w-14 h-14 rounded-full flex items-center justify-center
-                 border border-[var(--gold)] bg-[var(--burgundy)]
-                 hover:opacity-85 transition"
-        >
-          <!-- Phone SVG (gold) -->
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
-               xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.5 3.8h2.1c.6 0 1.1.4 1.2 1l.5 2.3c.1.5-.1 1-.5 1.3l-1.3 1c1 1.9 2.6 3.5 4.5 4.5l1-1.3c.3-.4.8-.6 1.3-.5l2.3.5c.6.1 1 .6 1 1.2v2.1c0 .7-.5 1.3-1.2 1.4-1 .2-2.8.3-5.3-1-2.6-1.3-5.2-3.9-6.5-6.5-1.3-2.5-1.2-4.3-1-5.3.1-.7.7-1.2 1.4-1.2Z"
-                  stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-[var(--gold)]/30 py-5 text-xs uppercase">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between">
-      <div>© 2025 PARDESI CONSULTANCY</div>
-      <div>Where Growth Meets Success</div>
-    </div>
-  </footer>
+<!-- FOOTER -->
+<footer class="border-t border-[var(--gold)]/30 py-5 text-xs uppercase">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between">
+    <div>© 2025 PARDESI CONSULTANCY</div>
+    <div>Where Growth Meets Success</div>
+  </div>
+</footer>
 
 </body>
 </html>
