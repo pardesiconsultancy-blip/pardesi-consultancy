@@ -10,6 +10,8 @@
   <style>
     :root{
       --burgundy: #2b0504;
+      --gold: #b08d2f;
+      --glow: rgba(176,141,47,0.85);
       --cream: #fff7e8;
     }
 
@@ -19,68 +21,80 @@
       color: var(--burgundy);
     }
 
-    a, p, h1, h2, h3, h4, h5, h6, span, li, div {
+    /* BODY TEXT */
+    .content p, .content h1, .content h2, .content h3 {
       color: var(--burgundy);
     }
 
-    /* Logo fix for iOS Safari */
+    /* LOGO FIX FOR iOS */
     .brand-logo {
       display: block;
       background: transparent;
-      mix-blend-mode: normal;
+      mix-blend-mode: lighten;
+    }
+    @supports (-webkit-touch-callout: none) {
+      .brand-logo { mix-blend-mode: normal !important; }
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-[#2b0504] text-[#fff7e8] shadow-lg">
+<!-- NAVBAR (MATCHES INDEX PAGE) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[var(--burgundy)] border-b border-[var(--gold)]/40 shadow-lg">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
     <!-- LOGO + NAME -->
-    <a href="index.html" class="flex items-center gap-3 text-[#fff7e8]">
+    <a href="index.html" class="flex items-center gap-4">
       <img
         src="/images/logo.png"
         alt="Pardesi Consultancy Logo"
-        class="brand-logo w-12 h-12 object-contain"
+        class="brand-logo w-16 h-16 object-contain opacity-95
+               drop-shadow-[0_0_20px_rgba(176,141,47,1)]"
       />
-      <div class="leading-tight uppercase">
-        <div class="text-sm text-[#fff7e8]">PARDESI CONSULTANCY</div>
-        <div class="text-[10px] tracking-[0.18em] text-[#fff7e8]/80">
+      <div class="leading-tight uppercase text-[var(--gold)]"
+           style="text-shadow:0 0 10px var(--glow)">
+        <div class="text-base">PARDESI CONSULTANCY</div>
+        <div class="text-xs tracking-[0.18em] opacity-90">
           Where Growth Meets Success
         </div>
       </div>
     </a>
 
-    <!-- MENU -->
-    <nav class="hidden md:flex items-center gap-6 text-sm uppercase text-[#fff7e8]">
+    <!-- DESKTOP MENU -->
+    <nav class="hidden md:flex items-center gap-6 text-sm uppercase text-[var(--gold)]"
+         style="text-shadow:0 0 10px var(--glow)">
       <a href="index.html">Home</a>
       <a href="about.html" class="font-semibold">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- MOBILE -->
+    <!-- MOBILE MENU BUTTON -->
     <button
-      class="md:hidden text-2xl text-[#fff7e8]"
+      class="md:hidden text-2xl text-[var(--gold)]"
+      style="text-shadow:0 0 10px var(--glow)"
       onclick="document.getElementById('mobileMenu').classList.toggle('hidden');"
+      aria-label="Open menu"
     >☰</button>
   </div>
 
   <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="md:hidden hidden bg-[#2b0504] text-[#fff7e8] border-t border-[#fff7e8]/20 uppercase">
-    <a href="index.html" class="block px-4 py-3 border-b border-[#fff7e8]/20">Home</a>
-    <a href="about.html" class="block px-4 py-3 border-b border-[#fff7e8]/20 font-semibold">About</a>
-    <a href="services.html" class="block px-4 py-3 border-b border-[#fff7e8]/20">Services</a>
+  <div id="mobileMenu"
+       class="md:hidden hidden border-t border-[var(--gold)]/30 uppercase
+              bg-[var(--burgundy)] text-[var(--gold)]"
+       style="text-shadow:0 0 10px var(--glow)">
+    <a href="index.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">Home</a>
+    <a href="about.html" class="block px-4 py-3 border-b border-[var(--gold)]/20 font-semibold">About</a>
+    <a href="services.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">Services</a>
     <a href="contact.html" class="block px-4 py-3">Contact</a>
   </div>
 </header>
 
-<div class="pt-28"></div>
+<div class="pt-32"></div>
 
 <!-- ABOUT CONTENT -->
-<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+<section class="content max-w-6xl mx-auto px-4 sm:px-6 py-12">
 
   <div class="max-w-3xl mx-auto text-center">
     <h1 class="text-3xl md:text-4xl font-semibold uppercase">
@@ -88,35 +102,34 @@
     </h1>
   </div>
 
-  <!-- STORY -->
+  <!-- REAL STORY -->
   <div class="max-w-4xl mx-auto mt-8 text-sm md:text-base leading-relaxed space-y-6">
 
     <p>
-      Pardesi Consultancy was founded by <strong>Sahil Vashisht</strong> and <strong>Pooja Tiwari</strong>,
-      not as a business idea, but as a result of lived experience.
+      Pardesi Consultancy was founded by <strong>Sahil Vashisht</strong> and
+      <strong>Pooja Tiwari</strong> — not as a business plan, but as a result of real-life experience.
     </p>
 
     <p>
-      Like many newcomers, we went through the same uncertainty — understanding processes, preparing documents,
-      dealing with timelines, and trying to make the right decisions without clear guidance.
-      We experienced firsthand how overwhelming it can be when information is scattered and advice is unclear.
+      Like many newcomers, we faced uncertainty, confusion, and countless questions.
+      Understanding processes, preparing documents, and making the right decisions without clear guidance
+      was challenging and often stressful.
     </p>
 
     <p>
-      Every step of our journey required patience, research, and learning from real situations.
-      We understood the importance of doing things correctly the first time,
-      and how even small mistakes could cause unnecessary delays and stress.
+      Through our own journey, we learned how important accuracy, timing, and clarity are.
+      Even small mistakes can cause delays, unnecessary stress, and lost opportunities.
     </p>
 
     <p>
-      Over time, we gained a deep understanding of the system through our own efforts.
-      That experience shaped the foundation of Pardesi Consultancy —
+      Over time, we gained deep insight through research, effort, and lived experience.
+      That journey became the foundation of Pardesi Consultancy —
       a place built to offer honest guidance, clear explanations, and structured support.
     </p>
 
     <p>
-      Our goal is simple: to help others avoid confusion and move forward with confidence,
-      using knowledge gained from real-life experience, not assumptions.
+      Our mission is simple: help others move forward with confidence,
+      using guidance shaped by real experience — not guesswork.
     </p>
 
   </div>
@@ -127,21 +140,21 @@
     <div class="bg-white rounded-xl shadow-md p-6 text-center">
       <h3 class="uppercase font-semibold">Clarity</h3>
       <p class="mt-3 text-sm">
-        We explain every step clearly so you understand what comes next.
+        Straightforward explanations so you always know the next step.
       </p>
     </div>
 
     <div class="bg-white rounded-xl shadow-md p-6 text-center">
       <h3 class="uppercase font-semibold">Experience</h3>
       <p class="mt-3 text-sm">
-        Our guidance is based on real journeys and practical understanding.
+        Guidance based on real journeys and real learning.
       </p>
     </div>
 
     <div class="bg-white rounded-xl shadow-md p-6 text-center">
       <h3 class="uppercase font-semibold">Trust</h3>
       <p class="mt-3 text-sm">
-        We believe honest communication builds long-term trust.
+        Honest communication and realistic guidance.
       </p>
     </div>
 
@@ -150,7 +163,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-[#2b0504] text-[#fff7e8]/80 py-5 text-xs mt-10">
+<footer class="bg-[var(--burgundy)] text-[#fff7e8]/80 py-5 text-xs mt-10">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between">
     <div>© 2025 Pardesi Consultancy</div>
     <div>Built from real experience</div>
