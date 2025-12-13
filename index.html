@@ -11,7 +11,7 @@
     :root{
       --burgundy: #2b0504;
       --gold: #b08d2f;
-      --glow: rgba(176,141,47,0.75);
+      --glow: rgba(176,141,47,0.8);
     }
 
     body{
@@ -46,6 +46,20 @@
       0% { background-position: 200% center; }
       100% { background-position: 0% center; }
     }
+
+    /* ===== LOGO BLEND FIX (iPhone Safari) ===== */
+    .brand-logo {
+      display: block;
+      background: transparent;
+      mix-blend-mode: lighten; /* Android + Desktop */
+    }
+
+    /* Disable blend mode ONLY on iOS Safari */
+    @supports (-webkit-touch-callout: none) {
+      .brand-logo {
+        mix-blend-mode: normal !important;
+      }
+    }
   </style>
 </head>
 
@@ -60,9 +74,8 @@
       <img
         src="/images/logo.png"
         alt="Pardesi Consultancy Logo"
-        class="w-16 h-16 object-contain opacity-95
-               drop-shadow-[0_0_18px_rgba(176,141,47,0.8)]
-               mix-blend-lighten"
+        class="brand-logo w-16 h-16 object-contain opacity-95
+               drop-shadow-[0_0_18px_rgba(176,141,47,0.9)]"
       />
 
       <div class="leading-tight uppercase">
@@ -108,9 +121,8 @@
       <img
         src="/images/logo.png"
         alt="Pardesi Consultancy Logo"
-        class="w-40 h-40 object-contain opacity-95
-               drop-shadow-[0_0_40px_rgba(176,141,47,0.9)]
-               mix-blend-lighten"
+        class="brand-logo w-40 h-40 object-contain opacity-95
+               drop-shadow-[0_0_42px_rgba(176,141,47,1)]"
       />
     </div>
 
@@ -123,7 +135,7 @@
       Where Growth Meets Success
     </p>
 
-    <!-- ICON-ONLY CONTACT -->
+    <!-- ICON CONTACT -->
     <div class="mt-12 flex gap-5 justify-center">
 
       <!-- WhatsApp -->
