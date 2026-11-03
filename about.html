@@ -1,174 +1,161 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pardesi Consultancy – About Us</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    :root{
-      --burgundy: #2b0504;
-      --gold: #b08d2f;
-      --glow: rgba(176,141,47,0.85);
-      --cream: #fff7e8;
-    }
-
-    body{
-      font-family: "Poppins", system-ui, sans-serif;
-      background: var(--cream);
-      color: var(--burgundy);
-    }
-
-    /* BODY TEXT */
-    .content p, .content h1, .content h2, .content h3 {
-      color: var(--burgundy);
-    }
-
-    /* LOGO FIX FOR iOS */
-    .brand-logo {
-      display: block;
-      background: transparent;
-      mix-blend-mode: lighten;
-    }
-    @supports (-webkit-touch-callout: none) {
-      .brand-logo { mix-blend-mode: normal !important; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Pardesi Consultancy and our approach to helping students explore Canadian colleges, universities and admissions opportunities.">
+  <meta name="theme-color" content="#390d19">
+  <title>About Us | Pardesi Consultancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html">
+        <span class="brand-name">PARDesi</span>
+        <span class="brand-subtitle">CONSULTANCY</span>
+      </a>
 
-<!-- NAVBAR (MATCHES INDEX PAGE) -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-[var(--burgundy)] border-b border-[var(--gold)]/40 shadow-lg">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
 
-    <!-- LOGO + NAME -->
-    <a href="index.html" class="flex items-center gap-4">
-      <img
-        src="/images/logo.png"
-        alt="Pardesi Consultancy Logo"
-        class="brand-logo w-16 h-16 object-contain opacity-95
-               drop-shadow-[0_0_20px_rgba(176,141,47,1)]"
-      />
-      <div class="leading-tight uppercase text-[var(--gold)]"
-           style="text-shadow:0 0 10px var(--glow)">
-        <div class="text-base">PARDESI CONSULTANCY</div>
-        <div class="text-xs tracking-[0.18em] opacity-90">
-          Where Growth Meets Success
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">GET TO KNOW US</p>
+        <h1>About <span>Pardesi Consultancy</span></h1>
+        <p>Helping students make informed decisions about their educational future.</p>
+      </div>
+    </section>
+
+    <section class="section-padding about-main">
+      <div class="container about-grid">
+        <div class="about-highlight">
+          <p class="eyebrow">OUR PURPOSE</p>
+          <h2>Where Growth Meets Success.</h2>
+          <div class="gold-line"></div>
+          <p>
+            We believe the right educational opportunity can open doors
+            to a brighter future.
+          </p>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow dark-eyebrow">WHO WE ARE</p>
+          <h2>Supporting your <span>academic ambitions.</span></h2>
+
+          <p>
+            Pardesi Consultancy is focused on helping students explore
+            educational opportunities at Canadian colleges and universities.
+          </p>
+
+          <p>
+            We understand that selecting an institution and a program is
+            an important decision. Every student has a different academic
+            history, set of interests and future aspirations.
+          </p>
+
+          <p>
+            Our approach begins with understanding your educational profile.
+            We then help you explore suitable institutions and programs and
+            provide practical support as you navigate the admissions process.
+          </p>
+
+          <p>
+            Our goal is simple: make the process more understandable,
+            organized and focused on your individual educational goals.
+          </p>
         </div>
       </div>
-    </a>
+    </section>
 
-    <!-- DESKTOP MENU -->
-    <nav class="hidden md:flex items-center gap-6 text-sm uppercase text-[var(--gold)]"
-         style="text-shadow:0 0 10px var(--glow)">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="font-semibold">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <section class="values-section section-padding">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT MATTERS TO US</p>
+          <h2>Our <span>Values</span></h2>
+          <p>The principles behind the way we support students.</p>
+        </div>
 
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      class="md:hidden text-2xl text-[var(--gold)]"
-      style="text-shadow:0 0 10px var(--glow)"
-      onclick="document.getElementById('mobileMenu').classList.toggle('hidden');"
-      aria-label="Open menu"
-    >☰</button>
-  </div>
+        <div class="values-grid">
+          <article class="value-card">
+            <div class="value-icon">✦</div>
+            <h3>Personalized Approach</h3>
+            <p>
+              We consider each student's academic background and goals
+              rather than taking a one-size-fits-all approach.
+            </p>
+          </article>
 
-  <!-- MOBILE MENU -->
-  <div id="mobileMenu"
-       class="md:hidden hidden border-t border-[var(--gold)]/30 uppercase
-              bg-[var(--burgundy)] text-[var(--gold)]"
-       style="text-shadow:0 0 10px var(--glow)">
-    <a href="index.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">Home</a>
-    <a href="about.html" class="block px-4 py-3 border-b border-[var(--gold)]/20 font-semibold">About</a>
-    <a href="services.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">Services</a>
-    <a href="contact.html" class="block px-4 py-3">Contact</a>
-  </div>
-</header>
+          <article class="value-card">
+            <div class="value-icon">◇</div>
+            <h3>Clarity & Transparency</h3>
+            <p>
+              We aim to communicate information clearly so students can
+              make informed educational decisions.
+            </p>
+          </article>
 
-<div class="pt-32"></div>
+          <article class="value-card">
+            <div class="value-icon">◎</div>
+            <h3>Student-Focused Support</h3>
+            <p>
+              We focus on understanding your needs and helping you navigate
+              the institution and program selection process.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<!-- ABOUT CONTENT -->
-<section class="content max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <section class="about-cta">
+      <div class="container cta-content">
+        <h2>Every great journey starts with a decision.</h2>
+        <p>Let's explore the educational opportunities that fit your goals.</p>
+        <a href="contact.html" class="btn btn-gold">Connect With Us</a>
+      </div>
+    </section>
+  </main>
 
-  <div class="max-w-3xl mx-auto text-center">
-    <h1 class="text-3xl md:text-4xl font-semibold uppercase">
-      Our Story
-    </h1>
-  </div>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-name">PARDesi</span>
+          <span class="brand-subtitle">CONSULTANCY</span>
+        </a>
+        <p>Where Growth Meets Success.</p>
+      </div>
 
-  <!-- REAL STORY -->
-  <div class="max-w-4xl mx-auto mt-8 text-sm md:text-base leading-relaxed space-y-6">
-
-    <p>
-      Pardesi Consultancy was founded by <strong>Sahil Vashisht</strong> and
-      <strong>Pooja Tiwari</strong> — not as a business plan, but as a result of real-life experience.
-    </p>
-
-    <p>
-      Like many newcomers, we faced uncertainty, confusion, and countless questions.
-      Understanding processes, preparing documents, and making the right decisions without clear guidance
-      was challenging and often stressful.
-    </p>
-
-    <p>
-      Through our own journey, we learned how important accuracy, timing, and clarity are.
-      Even small mistakes can cause delays, unnecessary stress, and lost opportunities.
-    </p>
-
-    <p>
-      Over time, we gained deep insight through research, effort, and lived experience.
-      That journey became the foundation of Pardesi Consultancy —
-      a place built to offer honest guidance, clear explanations, and structured support.
-    </p>
-
-    <p>
-      Our mission is simple: help others move forward with confidence,
-      using guidance shaped by real experience — not guesswork.
-    </p>
-
-  </div>
-
-  <!-- VALUES -->
-  <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-
-    <div class="bg-white rounded-xl shadow-md p-6 text-center">
-      <h3 class="uppercase font-semibold">Clarity</h3>
-      <p class="mt-3 text-sm">
-        Straightforward explanations so you always know the next step.
-      </p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
 
-    <div class="bg-white rounded-xl shadow-md p-6 text-center">
-      <h3 class="uppercase font-semibold">Experience</h3>
-      <p class="mt-3 text-sm">
-        Guidance based on real journeys and real learning.
-      </p>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Pardesi Consultancy. All rights reserved.</p>
+      <p>Educational information and admissions support only.</p>
     </div>
+  </footer>
 
-    <div class="bg-white rounded-xl shadow-md p-6 text-center">
-      <h3 class="uppercase font-semibold">Trust</h3>
-      <p class="mt-3 text-sm">
-        Honest communication and realistic guidance.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-[var(--burgundy)] text-[#fff7e8]/80 py-5 text-xs mt-10">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between">
-    <div>© 2025 Pardesi Consultancy</div>
-    <div>Built from real experience</div>
-  </div>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
