@@ -1,501 +1,217 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Pardesi Consultancy for Canadian college and university selection and educational admissions assistance.">
+  <meta name="theme-color" content="#390d19">
+  <title>Contact Us | Pardesi Consultancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-    <title>Contact Pardesi Consultancy | WhatsApp & Call 905-226-6327</title>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html">
+        <span class="brand-name">PARDesi</span>
+        <span class="brand-subtitle">CONSULTANCY</span>
+      </a>
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a class="active nav-cta" href="contact.html">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
 
-    <style>
-      :root{
-        --burgundy:#2b0504;
-        --gold:#b08d2f;
-        --glow:rgba(176,141,47,0.85);
-        --cream:#fff7e8;
-      }
-
-      body { font-family: "Poppins", system-ui, sans-serif; }
-      html { scroll-behavior: smooth; }
-
-      /* Logo fix for iOS Safari */
-      .brand-logo{
-        display:block;
-        background:transparent;
-        mix-blend-mode:lighten;
-      }
-      @supports (-webkit-touch-callout:none){
-        .brand-logo{ mix-blend-mode:normal !important; }
-      }
-    </style>
-
-    <!-- SEO -->
-    <meta name="title" content="Contact Pardesi Consultancy | WhatsApp & Call 905-226-6327" />
-    <meta
-      name="description"
-      content="Contact Pardesi Consultancy for Canada study, work, visitor and family visa guidance. Fast WhatsApp support, direct phone call, and quick enquiry form."
-    />
-    <meta
-      name="keywords"
-      content="Pardesi Consultancy contact, WhatsApp support, call Pardesi Consultancy, Canada visa guidance, study visa guidance, visitor visa guidance, work visa guidance, family sponsorship guidance"
-    />
-    <meta name="author" content="Pardesi Consultancy" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Contact Pardesi Consultancy | WhatsApp & Call 905-226-6327" />
-    <meta
-      property="og:description"
-      content="Fast response on WhatsApp. Call us directly at 905-226-6327. Quick enquiry form available."
-    />
-    <meta property="og:image" content="https://pardesiconsultancy.ca/images/ogimage.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pardesiconsultancy.ca/contact.html" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact Pardesi Consultancy" />
-    <meta
-      name="twitter:description"
-      content="WhatsApp + Call support: 905-226-6327. Quick enquiry form available."
-    />
-    <meta name="twitter:image" content="https://pardesiconsultancy.ca/images/ogimage.jpg" />
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://pardesiconsultancy.ca/contact.html" />
-  </head>
-
-  <body class="bg-[#fff7e8] text-[#2b0504]">
-    <!-- NAVBAR (MATCHES INDEX PAGE) -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[var(--burgundy)] border-b border-[var(--gold)]/40 shadow-lg">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <!-- LOGO + NAME -->
-        <a href="index.html" class="flex items-center gap-4">
-          <img
-            src="/images/logo.png"
-            alt="Pardesi Consultancy Logo"
-            class="brand-logo w-16 h-16 object-contain opacity-95 drop-shadow-[0_0_20px_rgba(176,141,47,1)]"
-          />
-          <div class="leading-tight uppercase text-[var(--gold)]" style="text-shadow:0 0 10px var(--glow)">
-            <div class="text-base">PARDESI CONSULTANCY</div>
-            <div class="text-xs tracking-[0.18em] opacity-90">Where Growth Meets Success</div>
-          </div>
-        </a>
-
-        <!-- Desktop Menu -->
-        <nav class="hidden md:flex items-center gap-6 text-sm uppercase text-[var(--gold)]" style="text-shadow:0 0 10px var(--glow)">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html" class="font-semibold">Contact</a>
-        </nav>
-
-        <!-- Mobile Menu Button -->
-        <button
-          class="md:hidden text-2xl text-[var(--gold)]"
-          style="text-shadow:0 0 10px var(--glow)"
-          aria-label="Open menu"
-          onclick="document.getElementById('mobileMenu').classList.toggle('hidden');"
-        >
-          ☰
-        </button>
-      </div>
-
-      <!-- Mobile Dropdown -->
-      <div
-        id="mobileMenu"
-        class="md:hidden hidden bg-[var(--burgundy)] text-[var(--gold)] border-t border-[var(--gold)]/30 uppercase"
-        style="text-shadow:0 0 10px var(--glow)"
-      >
-        <a href="index.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">Home</a>
-        <a href="about.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">About</a>
-        <a href="services.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">Services</a>
-        <a href="contact.html" class="block px-4 py-3 font-semibold">Contact</a>
-      </div>
-    </header>
-
-    <div class="pt-28"></div>
-
-    <!-- HERO -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="bg-white/70 border border-[#2b0504]/10 rounded-3xl shadow-sm p-6 sm:p-10">
-        <div class="flex flex-col md:flex-row items-center gap-8">
-          <div class="flex-1 text-center md:text-left">
-            <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#2b0504]/70">
-              ✅ Fast Response • ✅ Clear Guidance • ✅ Trusted Support
-            </p>
-            <h1 class="mt-3 text-3xl sm:text-4xl font-bold leading-tight">
-              Contact Pardesi Consultancy
-            </h1>
-            <p class="mt-3 text-sm sm:text-base text-[#5b403a] max-w-xl">
-              Reach us instantly on WhatsApp, call directly, or send a quick enquiry.
-              We reply as soon as possible and guide you with the right next steps.
-            </p>
-
-            <!-- Primary CTAs -->
-            <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-              <a
-                href="https://wa.me/19052266327"
-                class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full shadow-lg text-sm font-semibold hover:bg-[#1ebe5b] transition"
-              >
-                💬 Chat on WhatsApp
-              </a>
-
-              <a
-                href="tel:+19052266327"
-                class="inline-flex items-center justify-center gap-2 bg-[#2b0504] text-[#f4e3c3] px-6 py-3 rounded-full shadow-lg text-sm font-semibold hover:opacity-90 transition"
-              >
-                📞 Call: 905-226-6327
-              </a>
-            </div>
-
-            <!-- Trust row -->
-            <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-              <div class="bg-[#fff7e8] border border-[#2b0504]/10 rounded-2xl p-4">
-                <div class="font-semibold">⏱️ Quick replies</div>
-                <div class="text-[#5b403a] mt-1">WhatsApp support available 7 days</div>
-              </div>
-              <div class="bg-[#fff7e8] border border-[#2b0504]/10 rounded-2xl p-4">
-                <div class="font-semibold">🧾 Clear steps</div>
-                <div class="text-[#5b403a] mt-1">Simple explanation of requirements</div>
-              </div>
-              <div class="bg-[#fff7e8] border border-[#2b0504]/10 rounded-2xl p-4">
-                <div class="font-semibold">🔒 Respect & privacy</div>
-                <div class="text-[#5b403a] mt-1">Your details are handled carefully</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Visual -->
-          <div class="w-full md:w-[360px] flex items-center justify-center">
-            <div class="relative w-full">
-              <div class="absolute -top-6 -left-6 w-24 h-24 rounded-3xl bg-[#2b0504]/10"></div>
-              <div class="absolute -bottom-6 -right-6 w-28 h-28 rounded-3xl bg-[#25D366]/15"></div>
-
-              <div class="relative bg-white rounded-3xl border border-[#2b0504]/10 shadow-md p-7 text-center">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                  alt="WhatsApp"
-                  class="w-24 h-24 mx-auto"
-                  loading="lazy"
-                />
-                <div class="mt-4 font-semibold">Prefer WhatsApp?</div>
-                <p class="mt-1 text-sm text-[#5b403a]">
-                  Tap to chat directly with our team.
-                </p>
-                <a
-                  href="https://wa.me/19052266327"
-                  class="mt-4 inline-block w-full bg-[#25D366] text-white px-5 py-3 rounded-full text-sm font-semibold hover:bg-[#1ebe5b] transition"
-                >
-                  Start Chat
-                </a>
-                <div class="mt-3 text-xs text-[#5b403a]">
-                  Phone: <a class="underline font-semibold" href="tel:+19052266327">905-226-6327</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h1>Start a <span>Conversation</span></h1>
+        <p>Tell us about your educational goals. We'd be happy to hear from you.</p>
       </div>
     </section>
 
-    <!-- CONTACT METHODS + FORM -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 mt-10">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <!-- Contact cards -->
-        <div class="lg:col-span-1 space-y-4">
-          <div class="bg-white/70 border border-[#2b0504]/10 rounded-3xl p-6 shadow-sm">
-            <h2 class="text-lg font-semibold">Direct Contact</h2>
+    <section class="section-padding contact-section">
+      <div class="container contact-grid">
 
-            <div class="mt-4 space-y-3 text-sm">
-              <div class="flex items-start gap-3">
-                <div class="w-9 h-9 rounded-2xl bg-[#2b0504] text-[#f4e3c3] flex items-center justify-center">📞</div>
-                <div>
-                  <div class="font-semibold">Phone</div>
-                  <a class="underline hover:text-black" href="tel:+19052266327">905-226-6327</a>
-                  <div class="text-xs text-[#5b403a] mt-1">Tap to call on mobile</div>
-                </div>
-              </div>
+        <div class="contact-info">
+          <p class="eyebrow dark-eyebrow">GET IN TOUCH</p>
+          <h2>Let's explore your <span>educational options.</span></h2>
+          <p>
+            Whether you're exploring Canadian colleges, universities or
+            academic programs, share a little about yourself and we'll
+            get back to you.
+          </p>
 
-              <div class="flex items-start gap-3">
-                <div class="w-9 h-9 rounded-2xl bg-[#25D366] text-white flex items-center justify-center">💬</div>
-                <div>
-                  <div class="font-semibold">WhatsApp</div>
-                  <a class="underline hover:text-black" href="https://wa.me/19052266327">Chat on WhatsApp</a>
-                  <div class="text-xs text-[#5b403a] mt-1">Fast responses</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <div class="w-9 h-9 rounded-2xl bg-[#2b0504]/10 text-[#2b0504] flex items-center justify-center">🕒</div>
-                <div>
-                  <div class="font-semibold">Hours</div>
-                  <div class="text-[#5b403a]">WhatsApp: 7 days a week</div>
-                  <div class="text-[#5b403a]">Calls: By availability</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-5 pt-5 border-t border-[#2b0504]/10 text-xs text-[#5b403a]">
-              Tip: Include your <span class="font-semibold">current location</span> and the
-              <span class="font-semibold">service you need</span> so we can guide you faster.
+          <div class="contact-detail">
+            <span class="contact-icon">✉</span>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:info@pardesiconsultancy.ca">
+                info@pardesiconsultancy.ca
+              </a>
             </div>
           </div>
 
-          <div class="bg-[#fff7e8] border border-[#2b0504]/10 rounded-3xl p-6 shadow-sm">
-            <h3 class="text-base font-semibold">What to send us</h3>
-            <ul class="mt-3 text-sm text-[#5b403a] space-y-2">
-              <li>✅ Your goal (study / work / visitor / family)</li>
-              <li>✅ Country you’re applying from</li>
-              <li>✅ Timeline (when you want to apply)</li>
-              <li>✅ Any refusals or special situation (if applicable)</li>
-            </ul>
+          <div class="contact-detail">
+            <span class="contact-icon">◎</span>
+            <div>
+              <h3>Website</h3>
+              <a href="https://pardesiconsultancy.ca">
+                pardesiconsultancy.ca
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-note">
+            <h3>A little about your goals</h3>
+            <p>
+              Sharing your previous education, preferred program and
+              intended study location will help us understand your inquiry.
+            </p>
           </div>
         </div>
 
-        <!-- Quick form -->
-        <div class="lg:col-span-2">
-          <div class="bg-white/70 border border-[#2b0504]/10 rounded-3xl p-6 sm:p-8 shadow-sm">
-            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
-              <div>
-                <h2 class="text-lg sm:text-xl font-semibold">Quick Enquiry Form</h2>
-                <p class="text-sm text-[#5b403a] mt-1">
-                  Send a quick message. This goes directly to our inbox (Formspree).
-                </p>
+        <div class="contact-form-card">
+          <h2>Student Inquiry Form</h2>
+          <p class="form-intro">Please complete the details below.</p>
+
+          <form id="contact-form" action="https://formspree.io/f/mblnwqyj" method="POST">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
               </div>
-              <a
-                href="https://wa.me/19052266327"
-                class="text-sm font-semibold underline hover:text-black"
-                title="Fastest option"
-              >
-                Fastest: WhatsApp →
-              </a>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+              </div>
             </div>
 
-            <!-- ✅ CONNECTED TO FORMSPREE -->
-            <form
-              action="https://formspree.io/f/mblnwqyj"
-              method="POST"
-              class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4"
-              id="contactForm"
-            >
-              <div>
-                <label class="text-sm font-semibold">Full Name</label>
-                <input
-                  required
-                  name="name"
-                  type="text"
-                  class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
-                  placeholder="Your name"
-                  autocomplete="name"
-                />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
               </div>
 
-              <div>
-                <label class="text-sm font-semibold">Phone </label>
-                <input
-                  name="phone"
-                  type="tel"
-                  class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
-                  placeholder="e.g., +1 905-226-6327"
-                  autocomplete="tel"
-                />
+              <div class="form-group">
+                <label for="location">Current Location</label>
+                <input type="text" id="location" name="location" placeholder="City and country">
               </div>
+            </div>
 
-              <div>
-                <label class="text-sm font-semibold">Email </label>
-                <input
-                  name="email"
-                  type="email"
-                  class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
-                  placeholder="you@example.com"
-                  autocomplete="email"
-                />
-              </div>
+            <div class="form-group">
+              <label for="education">Highest Education Completed *</label>
+              <select id="education" name="highest_education" required>
+                <option value="">Select your education</option>
+                <option>High School</option>
+                <option>Diploma</option>
+                <option>Bachelor's Degree</option>
+                <option>Postgraduate Diploma</option>
+                <option>Master's Degree</option>
+                <option>Other</option>
+              </select>
+            </div>
 
-              <div>
-                <label class="text-sm font-semibold">Service Needed</label>
-                <select
-                  required
-                  name="service"
-                  class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
-                >
-                  <option value="" disabled selected>Select one</option>
-                  <option>Study Guidance</option>
-                  <option>Work Guidance</option>
-                  <option>Visitor Visa Guidance</option>
-                  <option>Spousal / Family Sponsorship</option>
-                  <option>Other</option>
+            <div class="form-group">
+              <label for="interest">Area of Study / Program Interest *</label>
+              <input type="text" id="interest" name="program_interest" placeholder="e.g. Business, IT, Healthcare" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="institution">Preferred Institution Type</label>
+                <select id="institution" name="institution_type">
+                  <option value="">Select an option</option>
+                  <option>College</option>
+                  <option>University</option>
+                  <option>Open to Both</option>
+                  <option>Not Sure Yet</option>
                 </select>
               </div>
 
-              <div class="sm:col-span-2">
-                <label class="text-sm font-semibold">Your Message</label>
-                <textarea
-                  required
-                  name="message"
-                  rows="5"
-                  class="mt-2 w-full rounded-2xl border border-[#2b0504]/15 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2b0504]/20"
-                  placeholder="Write your details here…"
-                ></textarea>
-              </div>
-
-              <!-- Helpful hidden fields -->
-              <input type="hidden" name="_subject" value="New enquiry — Pardesi Consultancy" />
-              <input type="hidden" name="_format" value="plain" />
-
-              <div class="sm:col-span-2 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
-                <button
-                  type="submit"
-                  class="inline-flex items-center justify-center gap-2 rounded-full bg-[#2b0504] text-[#f4e3c3] px-6 py-3 text-sm font-semibold shadow-lg hover:opacity-90 transition"
-                >
-                  ✉️ Submit Enquiry
-                </button>
-
-                <div class="text-xs text-[#5b403a]">
-                  By submitting, you agree to be contacted for your enquiry.
-                </div>
-              </div>
-
-              <div id="formNote" class="sm:col-span-2 hidden mt-2 text-sm font-semibold"></div>
-            </form>
-          </div>
-
-          <!-- Mini FAQ -->
-          <div class="mt-6 bg-[#fff7e8] border border-[#2b0504]/10 rounded-3xl p-6 sm:p-8 shadow-sm">
-            <h2 class="text-lg sm:text-xl font-semibold">Quick Questions</h2>
-            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div class="bg-white/70 border border-[#2b0504]/10 rounded-2xl p-5">
-                <div class="font-semibold">How fast do you reply?</div>
-                <p class="text-[#5b403a] mt-2">WhatsApp is the fastest. We respond as soon as possible.</p>
-              </div>
-              <div class="bg-white/70 border border-[#2b0504]/10 rounded-2xl p-5">
-                <div class="font-semibold">What should I prepare?</div>
-                <p class="text-[#5b403a] mt-2">Your goal, country, timeline, and any previous refusals (if any).</p>
-              </div>
-              <div class="bg-white/70 border border-[#2b0504]/10 rounded-2xl p-5">
-                <div class="font-semibold">Do you offer calls?</div>
-                <p class="text-[#5b403a] mt-2">
-                  Yes. You can call <a class="underline font-semibold" href="tel:+19052266327">905-226-6327</a>
-                  or message on WhatsApp to schedule.
-                </p>
-              </div>
-              <div class="bg-white/70 border border-[#2b0504]/10 rounded-2xl p-5">
-                <div class="font-semibold">Where are you based?</div>
-                <p class="text-[#5b403a] mt-2">We support clients online. Message us and we’ll guide you from there.</p>
+              <div class="form-group">
+                <label for="intake">Preferred Intake</label>
+                <select id="intake" name="preferred_intake">
+                  <option value="">Select an intake</option>
+                  <option>January</option>
+                  <option>May</option>
+                  <option>September</option>
+                  <option>Flexible</option>
+                  <option>Not Sure Yet</option>
+                </select>
               </div>
             </div>
-          </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Educational Goals *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Share your academic background, interests and what you are looking for..." required></textarea>
+            </div>
+
+            <div class="form-group consent-group">
+              <label class="consent-label">
+                <input type="checkbox" name="consent" value="Agreed" required>
+                <span>I agree to be contacted by Pardesi Consultancy regarding my educational inquiry. *</span>
+              </label>
+            </div>
+
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit" class="btn btn-burgundy form-submit">
+              Submit Inquiry
+            </button>
+
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+
+            <p class="privacy-note">
+              Please do not submit passwords, financial details or other
+              sensitive personal documents through this form.
+            </p>
+          </form>
         </div>
+
       </div>
     </section>
+  </main>
 
-    <!-- Sticky mobile bar -->
-    <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-      <div class="mx-auto max-w-6xl px-4 pb-4">
-        <div class="bg-white/95 backdrop-blur border border-[#2b0504]/10 rounded-2xl shadow-lg p-3 flex gap-2">
-          <a
-            href="https://wa.me/19052266327"
-            class="flex-1 inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-2xl text-sm font-semibold"
-          >
-            💬 WhatsApp
-          </a>
-          <a
-            href="tel:+19052266327"
-            class="flex-1 inline-flex items-center justify-center gap-2 bg-[#2b0504] text-[#f4e3c3] px-4 py-3 rounded-2xl text-sm font-semibold"
-          >
-            📞 Call
-          </a>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-name">PARDesi</span>
+          <span class="brand-subtitle">CONSULTANCY</span>
+        </a>
+        <p>Where Growth Meets Success.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
 
-    <footer class="bg-[#2b0504] text-[#f4e3c3]/80 py-6 text-xs mt-10">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-2">
-        <div>© 2025 Pardesi Consultancy</div>
-        <div>
-          📞 <a href="tel:+19052266327" class="underline">905-226-6327</a> · WhatsApp support available 7 days a week
-        </div>
-      </div>
-    </footer>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Pardesi Consultancy. All rights reserved.</p>
+      <p>Educational information and admissions support only.</p>
+    </div>
+  </footer>
 
-    <!-- Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Pardesi Consultancy",
-        "url": "https://pardesiconsultancy.ca",
-        "logo": "https://pardesiconsultancy.ca/images/ogimage.jpg",
-        "telephone": "+1-905-226-6327",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+1-905-226-6327",
-            "contactType": "customer support",
-            "availableLanguage": ["English", "Hindi", "Punjabi"],
-            "areaServed": "CA"
-          }
-        ],
-        "founders": [
-          { "@type": "Person", "name": "Pooja Tiwari" },
-          { "@type": "Person", "name": "Sahil Vashisht" }
-        ],
-        "description": "Trusted Canada guidance helping students and families with study, work, visitor and family sponsorship pathways.",
-        "sameAs": []
-      }
-    </script>
-
-    <script>
-      (function () {
-        const form = document.getElementById("contactForm");
-        const note = document.getElementById("formNote");
-
-        form.addEventListener("submit", async function (e) {
-          e.preventDefault();
-          note.classList.remove("hidden");
-          note.classList.remove("text-red-700");
-          note.classList.add("text-[#2b0504]");
-          note.textContent = "Sending your enquiry...";
-
-          try {
-            const formData = new FormData(form);
-            const res = await fetch(form.action, {
-              method: "POST",
-              body: formData,
-              headers: { Accept: "application/json" }
-            });
-
-            if (res.ok) {
-              form.reset();
-              note.textContent =
-                "✅ Thank you! We received your enquiry. For the fastest reply, WhatsApp us at 905-226-6327.";
-            } else {
-              note.classList.remove("text-[#2b0504]");
-              note.classList.add("text-red-700");
-              note.textContent =
-                "⚠️ Something went wrong. Please try again, or WhatsApp us at 905-226-6327.";
-            }
-          } catch (err) {
-            note.classList.remove("text-[#2b0504]");
-            note.classList.add("text-red-700");
-            note.textContent =
-              "⚠️ Network error. Please try again, or WhatsApp us at 905-226-6327.";
-          }
-        });
-      })();
-    </script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
