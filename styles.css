@@ -1162,3 +1162,30 @@ h3 {
     font-size: 26px;
   }
 }
+
+.contact-icon {
+    font-size: 28px;
+    min-width: 35px;
+    margin-right: 12px;
+}
+
+.email-icon {
+    color: #c5a15b;
+}
+
+.whatsapp-icon {
+    color: #25D366;
+}
+
+.contact-detail a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-detail a:hover {
+    text-decoration: underline;
+}
+
+.whatsapp-icon:hover {
+    color: #128C7E;
+}
