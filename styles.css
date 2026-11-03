@@ -1347,3 +1347,70 @@ html {
         font-size: 16px;
     }
 }
+
+
+```css
+/* =================================
+   ABOUT PAGE ENHANCEMENTS
+================================= */
+
+.about-page-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-page-hero h1 {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-page-hero h1 span {
+    display: block;
+}
+
+.about-page-hero > .container > p:last-child {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* About highlight panel */
+.about-highlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-highlight-mark {
+    position: absolute;
+    right: 18px;
+    bottom: -65px;
+    font-family: "Playfair Display", serif;
+    font-size: 230px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.045);
+    pointer-events: none;
+}
+
+/* About journey section */
+.about-journey {
+    background: var(--cream);
+}
+
+.about-journey .trust-card {
+    height: 100%;
+}
+
+/* About page responsive adjustments */
+@media (max-width: 760px) {
+    .about-page-hero h1 span {
+        display: inline;
+    }
+
+    .about-highlight-mark {
+        font-size: 170px;
+        bottom: -45px;
+    }
+}
+```
