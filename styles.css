@@ -1191,26 +1191,17 @@ h3 {
 }
 
 
-/* Sticky website header */
+/* Sticky header – preserve existing website colours */
 .site-header,
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #4b1023;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* Prevent anchor links from hiding under the sticky header */
+/* Smooth scrolling */
 html {
+    scroll-behavior: smooth;
     scroll-padding-top: 100px;
-}
-
-/* Keep navigation accessible on mobile */
-@media (max-width: 768px) {
-    .site-header,
-    header {
-        position: sticky;
-        top: 0;
-    }
 }
