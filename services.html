@@ -1,166 +1,189 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pardesi Consultancy – Services</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    :root{
-      --burgundy:#2b0504;
-      --gold:#b08d2f;
-      --glow:rgba(176,141,47,0.85);
-    }
-
-    body{
-      font-family:"Poppins",system-ui,sans-serif;
-      background:#2b0504;
-      color:#f4e3c3;
-    }
-
-    /* Logo fix for iOS Safari */
-    .brand-logo{
-      display:block;
-      background:transparent;
-      mix-blend-mode:lighten;
-    }
-    @supports (-webkit-touch-callout:none){
-      .brand-logo{ mix-blend-mode:normal !important; }
-    }
-  </style>
-
-  <!-- SEO -->
-  <meta name="title" content="Pardesi Consultancy | Education & Visa Services">
-  <meta name="description" content="Education and visa guidance built from real-life experience.">
-  <link rel="canonical" href="https://pardesiconsultancy.ca/services.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Pardesi Consultancy's educational services, including academic profile assessment, Canadian college and university selection, and admissions assistance.">
+  <meta name="theme-color" content="#390d19">
+  <title>Our Services | Pardesi Consultancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html">
+        <span class="brand-name">PARDesi</span>
+        <span class="brand-subtitle">CONSULTANCY</span>
+      </a>
 
-<!-- HEADER (MATCHES INDEX PAGE) -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-[var(--burgundy)] border-b border-[var(--gold)]/40 shadow-lg">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
 
-    <!-- LOGO -->
-    <a href="index.html" class="flex items-center gap-4">
-      <img
-        src="/images/logo.png"
-        alt="Pardesi Consultancy Logo"
-        class="brand-logo w-16 h-16 object-contain opacity-95
-               drop-shadow-[0_0_20px_rgba(176,141,47,1)]"
-      />
-      <div class="leading-tight uppercase text-[var(--gold)]"
-           style="text-shadow:0 0 10px var(--glow)">
-        <div class="text-base">PARDESI CONSULTANCY</div>
-        <div class="text-xs tracking-[0.18em] opacity-90">
-          Where Growth Meets Success
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">HOW WE CAN HELP</p>
+        <h1>Our <span>Educational Services</span></h1>
+        <p>Helping you explore academic opportunities and navigate admissions.</p>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow dark-eyebrow">OUR SERVICES</p>
+          <h2>Find the Right Path for <span>Your Education</span></h2>
+          <p>
+            Our services are designed to help students understand their
+            educational options and organize their next steps.
+          </p>
+        </div>
+
+        <div class="detailed-services">
+
+          <article class="detailed-service">
+            <div class="service-number">01</div>
+            <div>
+              <h2>Academic Profile Assessment</h2>
+              <p>
+                Your educational background is the starting point for
+                identifying suitable study opportunities.
+              </p>
+              <ul>
+                <li>Review of previous academic qualifications</li>
+                <li>Understanding educational interests and objectives</li>
+                <li>Discussion of potential areas of study</li>
+                <li>Identification of relevant academic considerations</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="detailed-service">
+            <div class="service-number">02</div>
+            <div>
+              <h2>Canadian College & University Selection</h2>
+              <p>
+                Explore educational institutions and programs across Canada
+                that may align with your academic profile and preferences.
+              </p>
+              <ul>
+                <li>Researching colleges and universities</li>
+                <li>Exploring available academic programs</li>
+                <li>Comparing institution and program information</li>
+                <li>Reviewing publicly available admission requirements</li>
+                <li>Considering location, tuition and program duration</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="detailed-service">
+            <div class="service-number">03</div>
+            <div>
+              <h2>Admissions Process Assistance</h2>
+              <p>
+                Stay organized while preparing and navigating the
+                educational institution's admissions process.
+              </p>
+              <ul>
+                <li>Understanding application steps and deadlines</li>
+                <li>Organizing academic application information</li>
+                <li>Assistance with application preparation</li>
+                <li>Understanding institution-specific document checklists</li>
+                <li>Keeping track of application progress</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="detailed-service">
+            <div class="service-number">04</div>
+            <div>
+              <h2>Program & Institution Information</h2>
+              <p>
+                Make informed decisions by exploring reliable, publicly
+                available information about Canadian education.
+              </p>
+              <ul>
+                <li>Program structure and curriculum information</li>
+                <li>Tuition and fee information</li>
+                <li>Institution location and campus information</li>
+                <li>Program duration and available intakes</li>
+                <li>Links to official institution resources</li>
+              </ul>
+            </div>
+          </article>
+
         </div>
       </div>
-    </a>
+    </section>
 
-    <!-- DESKTOP MENU -->
-    <nav class="hidden md:flex items-center gap-6 text-sm uppercase text-[var(--gold)]"
-         style="text-shadow:0 0 10px var(--glow)">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html" class="font-semibold">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <section class="feature-section services-feature">
+      <div class="container feature-content">
+        <p class="eyebrow">YOUR GOALS MATTER</p>
+        <h2>Start with your profile.<br><span>Explore your possibilities.</span></h2>
+        <p>
+          Tell us about your academic background and what you hope to study.
+          We can help you explore the next steps.
+        </p>
+        <a href="contact.html" class="btn btn-gold">Get Started</a>
+      </div>
+    </section>
 
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      class="md:hidden text-2xl text-[var(--gold)]"
-      style="text-shadow:0 0 10px var(--glow)"
-      onclick="document.getElementById('mobileMenu').classList.toggle('hidden');"
-    >☰</button>
-  </div>
+    <section class="section-padding">
+      <div class="container">
+        <div class="disclaimer">
+          <h3>Our Service Scope</h3>
+          <p>
+            Pardesi Consultancy focuses exclusively on educational
+            institution research, program selection and admissions
+            process assistance. We do not provide immigration consulting,
+            legal advice, visa application services or representation
+            before immigration authorities. Admission decisions are made
+            independently by the respective educational institutions.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- MOBILE MENU -->
-  <div id="mobileMenu"
-       class="md:hidden hidden bg-[var(--burgundy)] text-[var(--gold)]
-              border-t border-[var(--gold)]/30 uppercase"
-       style="text-shadow:0 0 10px var(--glow)">
-    <a href="index.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">Home</a>
-    <a href="about.html" class="block px-4 py-3 border-b border-[var(--gold)]/20">About</a>
-    <a href="services.html" class="block px-4 py-3 border-b border-[var(--gold)]/20 font-semibold">Services</a>
-    <a href="contact.html" class="block px-4 py-3">Contact</a>
-  </div>
-</header>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-name">PARDesi</span>
+          <span class="brand-subtitle">CONSULTANCY</span>
+        </a>
+        <p>Where Growth Meets Success.</p>
+      </div>
 
-<div class="pt-24"></div>
-
-<!-- PAGE HEADER -->
-<section class="text-center mb-12 px-4">
-  <h1 class="text-3xl font-semibold text-[#f4e3c3]">
-    Education Services and Guidance
-  </h1>
-  <p class="mt-2 text-sm text-[#f4e3c3]/75">
-    Trusted support for your Canadian journey.
-  </p>
-  <div class="mt-4 text-xs text-[var(--gold)] tracking-[0.22em] uppercase">
-    Where Growth Meets Success
-  </div>
-</section>
-
-<!-- SERVICES GRID -->
-<section class="pb-12">
-  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-    <!-- Service 1 -->
-    <div class="bg-black/15 rounded-2xl shadow-lg overflow-hidden border border-[var(--gold)]/20">
-      <img src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/43cab5c24b37148a70f7c7adc0bef8716ccf6c49/images/Screenshot%202025-11-15%20at%2010.44.59%E2%80%AFPM.png"
-           class="w-full h-44 object-cover">
-      <div class="p-4 text-center font-semibold text-sm">College Change Within Canada</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
 
-    <!-- Service 2 -->
-    <div class="bg-black/15 rounded-2xl shadow-lg overflow-hidden border border-[var(--gold)]/20">
-      <img src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.46.28%E2%80%AFPM.png"
-           class="w-full h-44 object-cover">
-      <div class="p-4 text-center font-semibold text-sm">Study Visa from Outside Canada</div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Pardesi Consultancy. All rights reserved.</p>
+      <p>Educational information and admissions support only.</p>
     </div>
+  </footer>
 
-    <!-- Service 3 -->
-    <div class="bg-black/15 rounded-2xl shadow-lg overflow-hidden border border-[var(--gold)]/20">
-      <img src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.48.28%E2%80%AFPM.png"
-           class="w-full h-44 object-cover">
-      <div class="p-4 text-center font-semibold text-sm">Convert Visitor Visa to Study Visa</div>
-    </div>
-
-    <!-- Service 4 -->
-    <div class="bg-black/15 rounded-2xl shadow-lg overflow-hidden border border-[var(--gold)]/20">
-      <img src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.50.24%E2%80%AFPM.png"
-           class="w-full h-44 object-cover">
-      <div class="p-4 text-center font-semibold text-sm">Spousal Open Work Permit & Sponsorship</div>
-    </div>
-
-    <!-- Service 5 -->
-    <div class="bg-black/15 rounded-2xl shadow-lg overflow-hidden border border-[var(--gold)]/20">
-      <img src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2010.52.18%E2%80%AFPM.png"
-           class="w-full h-44 object-cover">
-      <div class="p-4 text-center font-semibold text-sm">Post-Graduate Work Permit (PGWP)</div>
-    </div>
-
-    <!-- Service 6 -->
-    <div class="bg-black/15 rounded-2xl shadow-lg overflow-hidden border border-[var(--gold)]/20">
-      <img src="https://raw.githubusercontent.com/pardesiconsultancy-blip/pardesi-consultancy/main/images/Screenshot%202025-11-15%20at%2011.00.48%E2%80%AFPM.png"
-           class="w-full h-44 object-cover">
-      <div class="p-4 text-center font-semibold text-sm">Parents Visitor Visa</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-[#2b0504] text-[#f4e3c3]/80 py-5 text-xs border-t border-[var(--gold)]/20">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between">
-    <div>© 2025 Pardesi Consultancy</div>
-    <div>Information provided is for general guidance only</div>
-  </div>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
