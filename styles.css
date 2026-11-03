@@ -1205,3 +1205,145 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
+
+
+
+/* =========================================
+   PARDESI HOMEPAGE ENHANCEMENTS
+========================================= */
+
+/* Sticky header - preserve original branding */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--burgundy-dark);
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.14);
+}
+
+/* Anchor spacing and smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 105px;
+}
+
+/* Trust section */
+.trust-section {
+    background: var(--cream);
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.trust-card {
+    padding: 35px 30px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-bottom: 3px solid var(--gold);
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.trust-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(35, 15, 20, 0.12);
+}
+
+.trust-number {
+    display: inline-block;
+    color: #98723a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.trust-card h3 {
+    color: var(--burgundy);
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.trust-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* FAQ section */
+.faq-section {
+    background: var(--white);
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    margin-bottom: 13px;
+    padding: 20px 24px;
+}
+
+.faq-item summary {
+    position: relative;
+    padding-right: 25px;
+    color: var(--burgundy);
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #98723a;
+    font-family: "DM Sans", sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    color: var(--muted);
+    font-size: 14px;
+    padding-top: 13px;
+    max-width: 720px;
+}
+
+/* Mobile layout */
+@media (max-width: 760px) {
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-card {
+        padding: 28px 25px;
+    }
+
+    .faq-item {
+        padding: 18px;
+    }
+
+    .faq-item summary {
+        font-size: 16px;
+    }
+}
