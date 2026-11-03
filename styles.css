@@ -1189,3 +1189,28 @@ h3 {
 .whatsapp-icon:hover {
     color: #128C7E;
 }
+
+
+/* Sticky website header */
+.site-header,
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #4b1023;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Prevent anchor links from hiding under the sticky header */
+html {
+    scroll-padding-top: 100px;
+}
+
+/* Keep navigation accessible on mobile */
+@media (max-width: 768px) {
+    .site-header,
+    header {
+        position: sticky;
+        top: 0;
+    }
+}
