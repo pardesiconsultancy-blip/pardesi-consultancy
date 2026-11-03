@@ -1414,3 +1414,231 @@ html {
     }
 }
 ```
+```css
+/* ==========================================
+   SERVICES PAGE DESIGN
+========================================== */
+
+.services-page-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-page-hero h1 {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-page-hero h1 span {
+    display: block;
+}
+
+.services-page-hero > .container > p:last-child {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Services introduction */
+
+.services-intro {
+    background: var(--white);
+}
+
+.services-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 55px;
+}
+
+.services-detail-card {
+    position: relative;
+    padding: 38px 35px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-bottom: 3px solid var(--gold);
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.services-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(35, 15, 20, 0.12);
+}
+
+.services-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.services-card-top .service-number {
+    color: #98723a;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.services-card-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(197, 161, 91, 0.55);
+    border-radius: 50%;
+    color: #98723a;
+    font-size: 23px;
+}
+
+.services-card-label {
+    color: #98723a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    margin-bottom: 12px;
+}
+
+.services-detail-card h3 {
+    color: var(--burgundy);
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.services-detail-card > p:not(.services-card-label) {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.services-detail-card ul {
+    padding-left: 19px;
+    margin: 0;
+}
+
+.services-detail-card li {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    padding-left: 4px;
+    margin-bottom: 7px;
+}
+
+.services-detail-card li::marker {
+    color: #98723a;
+}
+
+
+/* Process section */
+
+.services-process {
+    background: var(--burgundy-dark);
+}
+
+.services-process .section-heading h2,
+.services-process .section-heading p:not(.eyebrow) {
+    color: var(--cream);
+}
+
+.services-process .section-heading .eyebrow {
+    color: var(--gold-light);
+}
+
+.services-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 50px;
+}
+
+.services-process-item {
+    padding: 30px;
+    border-top: 1px solid rgba(224, 197, 141, 0.55);
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.process-number {
+    display: block;
+    color: var(--gold-light);
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+.services-process-item h3 {
+    color: var(--cream);
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    margin-bottom: 13px;
+}
+
+.services-process-item p {
+    color: rgba(248, 245, 239, 0.78);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* CTA and disclaimer */
+
+.services-cta {
+    background: var(--cream);
+}
+
+.services-cta .cta-content h2 {
+    color: var(--burgundy);
+}
+
+.services-cta .cta-content > p:not(.eyebrow) {
+    color: var(--muted);
+}
+
+.services-scope-section {
+    background: var(--white);
+}
+
+.services-scope {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-scope .eyebrow {
+    margin-bottom: 12px;
+}
+
+
+/* Responsive layout */
+
+@media (max-width: 760px) {
+    .services-page-hero h1 span {
+        display: inline;
+    }
+
+    .services-card-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .services-detail-card {
+        padding: 30px 25px;
+    }
+
+    .services-process-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 35px;
+    }
+
+    .services-process-item {
+        padding: 25px;
+    }
+}
+```
