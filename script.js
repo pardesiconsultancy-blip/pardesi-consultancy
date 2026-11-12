@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
       menuToggle.textContent = isOpen ? "✕" : "☰";
     });
 
-    // Close menu after selecting a link
     mainNav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         mainNav.classList.remove("open");
@@ -35,21 +34,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const formStatus = document.getElementById("form-status");
 
   if (contactForm && formStatus) {
+
     contactForm.addEventListener("submit", async function (event) {
       event.preventDefault();
 
       const submitButton = contactForm.querySelector(
-        'button[type="submit"]'
+        'button[type="submit"], button:not([type])'
       );
 
-      const originalText = submitButton.textContent;
+      const originalText = submitButton
+        ? submitButton.textContent
+        : "Submit";
 
-      submitButton.disabled = true;
-      submitButton.textContent = "Submitting...";
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+      }
+
       formStatus.textContent = "";
       formStatus.className = "form-status";
 
       try {
+        console.log("Sending contact form to:", contactForm.action);
+
         const response = await fetch(contactForm.action, {
           method: "POST",
           body: new FormData(contactForm),
@@ -57,6 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
             Accept: "application/json"
           }
         });
+
+        const result = await response.json();
+
+        console.log("Formspree response:", response.status, result);
 
         if (response.ok) {
           formStatus.textContent =
@@ -66,30 +77,28 @@ document.addEventListener("DOMContentLoaded", function () {
           contactForm.reset();
 
         } else {
-          const result = await response.json();
+          const errorMessage = result.errors
+            ? result.errors.map(error => error.message).join(", ")
+            : "Unable to submit your inquiry.";
 
-          throw new Error(
-            result.errors
-              ? result.errors.map(error => error.message).join(", ")
-              : "Unable to submit your inquiry."
-          );
+          throw new Error(errorMessage);
         }
 
       } catch (error) {
+        console.error("Form submission error:", error);
+
         formStatus.textContent =
-          "Sorry, we couldn't submit your inquiry. Please try again or email us directly.";
+          "Sorry, your inquiry could not be submitted. Please try again or email us directly.";
 
         formStatus.classList.add("error");
 
-        console.error("Form submission error:", error);
-
       } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = originalText;
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }
       }
     });
   }
 
 });
-
-
